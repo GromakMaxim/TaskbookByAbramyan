@@ -363,4 +363,18 @@ class Begin {
                 "TF = 9·FC/5 + 32.");
         System.out.println("По фаренгейту: " + (9 * myScan.nextDouble() / 5 + 32));
     }
+
+    public void begin33(){
+        System.out.println("Begin33. Известно, что X кг конфет стоит A рублей." +
+                "Определить, сколько стоит 1 кг и Y кг этих же конфет.");
+
+        System.out.println("Введите кг");
+        double kg = myScan.nextDouble();
+        System.out.println("Введите стоимость в рублях этих "+ kg + "кг");
+        double price = myScan.nextDouble();
+        double pricePerKG = price / kg;
+        System.out.println("1кг стоит: " + pricePerKG);
+        System.out.println("Введите количество кг для расчета итоговой стоимости");
+        System.out.println("Ответ: " + myScan.nextDouble() * pricePerKG);
+    }
 }
