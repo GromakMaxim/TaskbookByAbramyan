@@ -356,7 +356,7 @@ class Begin {
         System.out.println("По цельсию: " + (myScan.nextDouble() - 32) * 5 / 9);
     }
 
-    public void begin32(){
+    public void begin32() {
         System.out.println("Begin32. Дано значение температуры T в градусах Цельсия. " +
                 "Определить значение этой же температуры в градусах Фаренгейта. " +
                 "Температура по Цельсию TC и температура по Фаренгейту TF связаны следующим соотношением:\n" +
@@ -364,13 +364,13 @@ class Begin {
         System.out.println("По фаренгейту: " + (9 * myScan.nextDouble() / 5 + 32));
     }
 
-    public void begin33(){
+    public void begin33() {
         System.out.println("Begin33. Известно, что X кг конфет стоит A рублей." +
                 "Определить, сколько стоит 1 кг и Y кг этих же конфет.");
 
         System.out.println("Введите кг");
         double kg = myScan.nextDouble();
-        System.out.println("Введите стоимость в рублях этих "+ kg + "кг");
+        System.out.println("Введите стоимость в рублях этих " + kg + "кг");
         double price = myScan.nextDouble();
         double pricePerKG = price / kg;
         System.out.println("1кг стоит: " + pricePerKG);
@@ -378,7 +378,7 @@ class Begin {
         System.out.println("Ответ: " + myScan.nextDouble() * pricePerKG);
     }
 
-    public void begin34(){
+    public void begin34() {
         System.out.println("Begin34. Известно, что X кг шоколадных конфет стоит A рублей, а Y кг ирисок стоит B рублей. " +
                 "Определить, сколько стоит 1 кг шоколадных конфет, 1 кг ирисок, " +
                 "а также во сколько раз шоколадные конфеты дороже ирисок.");
@@ -394,6 +394,23 @@ class Begin {
         System.out.println("1кг шоколадных конфет стоит: " + priceChocolate / weightChocolate);
         System.out.println("1кг ирисок стоит: " + priceToffee / weightToffee);
         System.out.println("Шоколадные конфеты дороже ирисок в " + (priceChocolate / weightChocolate) / (priceToffee / weightToffee));
-        
+    }
+
+    public void begin35() {
+        System.out.println("Begin35. Скорость лодки в стоячей воде V км/ч, скорость течения реки U км/ч (U < V). " +
+                "Время движения лодки по озеру T1 ч, а по реке (против течения) — T2 ч. " +
+                "Определить путь S, пройденный лодкой (путь = время · скорость). " +
+                "Учесть, что при движении против течения скорость лодки уменьшается на величину скорости течения.");
+        System.out.println("Введите скорость лодки в стоячей воде (кмч)");
+        double speedInLake = myScan.nextDouble();
+        System.out.println("Введите скорость течения реки (кмч)");
+        double speedRiverFlow = myScan.nextDouble();
+        System.out.println("Введите время движения лодки по озеру");
+        double timeLake = myScan.nextDouble();
+        System.out.println("Введите время движения лодки по реке (против течения)");
+        double timeRiver = myScan.nextDouble();
+
+        System.out.println("Путь лодки по озеру: " + (speedInLake * timeLake));
+        System.out.println("Путь лодки по реке против течения: " + (speedInLake - speedRiverFlow) * timeRiver);
     }
 }
