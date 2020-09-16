@@ -70,4 +70,16 @@ class Begin {
         System.out.println("Введите 2 неотрицательных числа, чтобы чтобы найти их среднее геометрическое");
         System.out.println("Среднее геометрическое: " + Math.sqrt(myScan.nextInt() * myScan.nextInt()));
     }
+
+    public void begin10() {
+        System.out.println("Введите 2 ненулевых числа, чтобы получить сумму, разность, произведение и частное их квадратов");
+        Scanner myScan = new Scanner(System.in);
+        double firstValue = Math.pow(myScan.nextInt(), 2);
+        double secondValue = Math.pow(myScan.nextInt(), 2);
+        System.out.println("Сумма квадратов: " + (firstValue + secondValue));
+        System.out.println("Разность квадратов: " + (firstValue + secondValue));
+        System.out.println("Произведение квадратов: " + (firstValue * secondValue));
+        System.out.println("Частное квадратов: " + (firstValue / secondValue));
+    }
+
 }
