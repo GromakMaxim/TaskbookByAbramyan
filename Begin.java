@@ -15,4 +15,14 @@ class Begin {
         Scanner myScan = new Scanner(System.in);
         System.out.println("Площадь: " + Math.pow(myScan.nextInt(), 2));
     }
+
+    public void begin3() {
+        System.out.println("Begin3. Даны стороны прямоугольника a и b. Найти его площадь S = a·b и периметр P = 2·(a + b)");
+        System.out.println("Введите 2 стороны прямоугольника, чтобы получить площадь и периметр");
+        Scanner myScan = new Scanner(System.in);
+        int sideFirst = myScan.nextInt();
+        int sideSecond = myScan.nextInt();
+        System.out.println("Периметр: " + 2 * (sideFirst + sideSecond));
+        System.out.println("Площадь: " + (sideFirst * sideSecond));
+    }
 }
