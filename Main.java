@@ -78,6 +78,9 @@ public class Main {
                 case 23:
                     begin.begin23();
                     break;
+                case 24:
+                    begin.begin24();
+                    break;
                 default:
                     System.out.println("Введите номер задачи 1-40");
                     break;

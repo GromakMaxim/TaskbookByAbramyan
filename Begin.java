@@ -264,6 +264,24 @@ class Begin {
         B=A;
         A = temp;
         System.out.println("1: " + A + " 2: " + B + " 3: " + C);
+    }
 
+    public void begin24(){
+        System.out.println("Begin24. Даны переменные A, B, C. " +
+                "Изменить их значения, переместив содержимое A в C, C — в B, B — в A, и вывести новые значения переменных A, B, C.");
+        System.out.println("Первая переменная: ");
+        String A = myScan.nextLine();
+        System.out.println("Вторая переменная: ");
+        String B = myScan.nextLine();
+        System.out.println("Третья переменная: ");
+        String C = myScan.nextLine();
+        System.out.println("1: " + A + " 2: " + B + " 3: " + C);
+        String temp;
+
+        temp = A;
+        A = B;
+        B = C;
+        C = temp;
+        System.out.println("1: " + A + " 2: " + B + " 3: " + C);
     }
 }
