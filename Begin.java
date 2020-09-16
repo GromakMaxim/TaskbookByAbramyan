@@ -245,4 +245,25 @@ class Begin {
         secondVal = temp;
         System.out.println("Первая переменная: " + firstVal + "Вторая переменная: " + secondVal);
     }
+
+    public void begin23(){
+        System.out.println("Begin23. Даны переменные A, B, C. " +
+                "Изменить их значения, переместив содержимое A в B, B — в C, C — в A, " +
+                "и вывести новые значения переменных A, B, C.");
+        System.out.println("Первая переменная: ");
+        String A = myScan.nextLine();
+        System.out.println("Вторая переменная: ");
+        String B = myScan.nextLine();
+        System.out.println("Третья переменная: ");
+        String C = myScan.nextLine();
+        System.out.println("1: " + A + " 2: " + B + " 3: " + C);
+
+        String temp;
+        temp = C;
+        C = B;
+        B=A;
+        A = temp;
+        System.out.println("1: " + A + " 2: " + B + " 3: " + C);
+
+    }
 }
