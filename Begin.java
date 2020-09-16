@@ -25,4 +25,11 @@ class Begin {
         System.out.println("Периметр: " + 2 * (sideFirst + sideSecond));
         System.out.println("Площадь: " + (sideFirst * sideSecond));
     }
+
+    public void begin4() {
+        System.out.println("Begin4. Дан диаметр окружности d. Найти ее длину L = π·d. В качестве значения π использовать 3.14.");
+        System.out.println("Введите диаметр окружности, чтобы найти её длину");
+        Scanner myScan = new Scanner(System.in);
+        System.out.println("Диаметр " + myScan.nextInt() * Math.PI);
+    }
 }

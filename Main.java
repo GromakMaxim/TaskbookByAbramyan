@@ -18,6 +18,9 @@ public class Main {
                 case 3:
                     begin.begin3();
                     break;
+                case 4:
+                    begin.begin4();
+                    break;
             }
         }
     }
