@@ -1,3 +1,4 @@
+import java.sql.SQLOutput;
 import java.util.Scanner;
 
 class Begin {
@@ -297,5 +298,20 @@ class Begin {
         System.out.println("Введите х");
         double x = myScan.nextDouble();
         System.out.println("Ответ: " + ((4 * Math.pow(x - 3, 6)) - (7 * Math.pow(x - 3, 3)) + 2));
+    }
+
+    public void begin27() {
+        System.out.println("Begin27. Дано число A. " +
+                "Вычислить A^8, используя вспомогательную переменную и три операции умножения. " +
+                "Для этого последовательно находить A^2, A^4, A^8. Вывести все найденные степени числа A.");
+        System.out.println("Введите число А");
+        double A = myScan.nextDouble();
+        double temp;
+        temp = A * A;
+        System.out.println("в квадрате- " + temp);
+        temp = temp * temp;
+        System.out.println("в четвёртой- " + temp);
+        temp = temp * temp;
+        System.out.println("в восьмой- " + temp);
     }
 }
