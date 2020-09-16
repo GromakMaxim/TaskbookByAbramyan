@@ -196,7 +196,8 @@ class Begin {
                                         +
                                         Math.pow(Integer.parseInt(coord2List[1]) - Integer.parseInt(coord1List[1]), 2))));
     }
-    public void begin21(){
+
+    public void begin21() {
         System.out.println("Begin21. Даны координаты трех вершин треугольника:\n" +
                 "(x1, y1), (x2, y2), (x3, y3).\n" +
                 "\n" +
@@ -209,24 +210,39 @@ class Begin {
 
         System.out.println("Введите координаты х1, у1");
         String coord1 = myScan.nextLine();
-        String [] coord1List = coord1.split(" ", 2);
+        String[] coord1List = coord1.split(" ", 2);
 
         System.out.println("Введите координаты х2, у2");
         String coord2 = myScan.nextLine();
-        String [] coord2List = coord2.split(" ", 2);
+        String[] coord2List = coord2.split(" ", 2);
 
         System.out.println("Введите координаты х3, у3");
         String coord3 = myScan.nextLine();
-        String [] coord3List = coord3.split(" ", 2);
+        String[] coord3List = coord3.split(" ", 2);
 
-        double AB = Math.abs(Math.sqrt(Math.pow(Integer.parseInt(coord2List[0]) - Integer.parseInt(coord1List[0]), 2)+ Math.pow(Integer.parseInt(coord2List[1]) - Integer.parseInt(coord1List[1]), 2)));
-        double AC = Math.abs(Math.sqrt(Math.pow(Integer.parseInt(coord3List[0]) - Integer.parseInt(coord1List[0]), 2)+ Math.pow(Integer.parseInt(coord3List[1]) - Integer.parseInt(coord1List[1]), 2)));
-        double BC = Math.abs(Math.sqrt(Math.pow(Integer.parseInt(coord3List[0]) - Integer.parseInt(coord2List[0]), 2)+ Math.pow(Integer.parseInt(coord3List[1]) - Integer.parseInt(coord2List[1]), 2)));
+        double AB = Math.abs(Math.sqrt(Math.pow(Integer.parseInt(coord2List[0]) - Integer.parseInt(coord1List[0]), 2) + Math.pow(Integer.parseInt(coord2List[1]) - Integer.parseInt(coord1List[1]), 2)));
+        double AC = Math.abs(Math.sqrt(Math.pow(Integer.parseInt(coord3List[0]) - Integer.parseInt(coord1List[0]), 2) + Math.pow(Integer.parseInt(coord3List[1]) - Integer.parseInt(coord1List[1]), 2)));
+        double BC = Math.abs(Math.sqrt(Math.pow(Integer.parseInt(coord3List[0]) - Integer.parseInt(coord2List[0]), 2) + Math.pow(Integer.parseInt(coord3List[1]) - Integer.parseInt(coord2List[1]), 2)));
 
         double halfPerimeter = (AB + AC + BC) / 2;
 
         double area = Math.sqrt(halfPerimeter * (halfPerimeter - AB) * (halfPerimeter - AC) * (halfPerimeter - BC));
         System.out.println("Полупериметр: " + halfPerimeter);
         System.out.println("Площадь: " + area);
+    }
+
+    public void begin22() {
+        System.out.println("Begin22. Поменять местами содержимое переменных A и B и вывести новые значения A и B.");
+
+        System.out.println("Первая переменная: ");
+        String firstVal = myScan.nextLine();
+        System.out.println("Вторая переменная: ");
+        String secondVal = myScan.nextLine();
+        System.out.println("Первая переменная: " + firstVal + "Вторая переменная: " + secondVal);
+        String temp;
+        temp = firstVal;
+        firstVal = secondVal;
+        secondVal = temp;
+        System.out.println("Первая переменная: " + firstVal + "Вторая переменная: " + secondVal);
     }
 }
