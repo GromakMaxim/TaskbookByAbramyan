@@ -48,4 +48,13 @@ class Begin {
         System.out.println("Объём: " + edge1 * edge2 * edge3);
         System.out.println("Площадь поверхности: " + 2 * (edge1 * edge2 + edge2 * edge3 + edge1 * edge3));
     }
+
+    public void begin7() {
+        System.out.println("Begin7. Найти длину окружности L и площадь круга S заданного радиуса R:\n" +
+                "L = 2·π·R,  S = π·R^2.");
+        System.out.println("Введите радиус окружности, чтобы вычислить длину окружности и площадь круга");
+        int radius = myScan.nextInt();
+        System.out.println("Длина окружности: " + 2 * Math.PI * radius);
+        System.out.println("Площадь круга: " + Math.PI * Math.pow(radius, 2));
+    }
 }
