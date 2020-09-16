@@ -334,4 +334,10 @@ class Begin {
         temp1 = temp2 * temp1;
         System.out.println("в 15- " + temp1);
     }
+
+    public void begin29() {
+        System.out.println("Begin29. Дано значение угла α в градусах (0 ≤ α < 360). " +
+                "Определить значение этого же угла в радианах, учитывая, что 180° = π радианов.");
+        System.out.println("В радианах: " + Math.abs(myScan.nextDouble()) * Math.PI / 180);
+    }
 }
