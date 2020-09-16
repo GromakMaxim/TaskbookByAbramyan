@@ -196,5 +196,37 @@ class Begin {
                                         +
                                         Math.pow(Integer.parseInt(coord2List[1]) - Integer.parseInt(coord1List[1]), 2))));
     }
+    public void begin21(){
+        System.out.println("Begin21. Даны координаты трех вершин треугольника:\n" +
+                "(x1, y1), (x2, y2), (x3, y3).\n" +
+                "\n" +
+                "Найти его периметр и площадь, используя формулу для расстояния между двумя точками на плоскости. " +
+                "Для нахождения площади треугольника со сторонами a, b, c использовать формулу Герона:\n" +
+                "S = (p·(p − a)·(p − b)·(p − c))^1/2,\n" +
+                "\n" +
+                "где p = (a + b + c)/2 — полупериметр.");
 
+
+        System.out.println("Введите координаты х1, у1");
+        String coord1 = myScan.nextLine();
+        String [] coord1List = coord1.split(" ", 2);
+
+        System.out.println("Введите координаты х2, у2");
+        String coord2 = myScan.nextLine();
+        String [] coord2List = coord2.split(" ", 2);
+
+        System.out.println("Введите координаты х3, у3");
+        String coord3 = myScan.nextLine();
+        String [] coord3List = coord3.split(" ", 2);
+
+        double AB = Math.abs(Math.sqrt(Math.pow(Integer.parseInt(coord2List[0]) - Integer.parseInt(coord1List[0]), 2)+ Math.pow(Integer.parseInt(coord2List[1]) - Integer.parseInt(coord1List[1]), 2)));
+        double AC = Math.abs(Math.sqrt(Math.pow(Integer.parseInt(coord3List[0]) - Integer.parseInt(coord1List[0]), 2)+ Math.pow(Integer.parseInt(coord3List[1]) - Integer.parseInt(coord1List[1]), 2)));
+        double BC = Math.abs(Math.sqrt(Math.pow(Integer.parseInt(coord3List[0]) - Integer.parseInt(coord2List[0]), 2)+ Math.pow(Integer.parseInt(coord3List[1]) - Integer.parseInt(coord2List[1]), 2)));
+
+        double halfPerimeter = (AB + AC + BC) / 2;
+
+        double area = Math.sqrt(halfPerimeter * (halfPerimeter - AB) * (halfPerimeter - AC) * (halfPerimeter - BC));
+        System.out.println("Полупериметр: " + halfPerimeter);
+        System.out.println("Площадь: " + area);
+    }
 }
