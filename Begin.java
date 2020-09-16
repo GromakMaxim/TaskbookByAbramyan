@@ -178,4 +178,23 @@ class Begin {
         System.out.println("Площадь: " + (lengthFirstSide * lengthSecondSide));
         System.out.println("Периметр: " + (2 * (lengthFirstSide * lengthSecondSide)));
     }
+
+    public void begin20() {
+        System.out.println("Begin20. Введите координаты 2 точек (х1, у1), (х2, у2) чтобы найти расстояние");
+        System.out.println("Введите координаты х1, у1");
+
+        String coord1 = myScan.nextLine();
+        String[] coord1List = coord1.split(" ", 2);
+        System.out.println("Введите координаты х2, у2");
+        String coord2 = myScan.nextLine();
+        String[] coord2List = coord2.split(" ", 2);
+
+        System.out.println("Расстояние: " +
+                Math.abs(
+                        Math.sqrt(
+                                Math.pow(Integer.parseInt(coord2List[0]) - Integer.parseInt(coord1List[0]), 2)
+                                        +
+                                        Math.pow(Integer.parseInt(coord2List[1]) - Integer.parseInt(coord1List[1]), 2))));
+    }
+
 }
