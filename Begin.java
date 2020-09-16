@@ -246,7 +246,7 @@ class Begin {
         System.out.println("Первая переменная: " + firstVal + "Вторая переменная: " + secondVal);
     }
 
-    public void begin23(){
+    public void begin23() {
         System.out.println("Begin23. Даны переменные A, B, C. " +
                 "Изменить их значения, переместив содержимое A в B, B — в C, C — в A, " +
                 "и вывести новые значения переменных A, B, C.");
@@ -261,12 +261,12 @@ class Begin {
         String temp;
         temp = C;
         C = B;
-        B=A;
+        B = A;
         A = temp;
         System.out.println("1: " + A + " 2: " + B + " 3: " + C);
     }
 
-    public void begin24(){
+    public void begin24() {
         System.out.println("Begin24. Даны переменные A, B, C. " +
                 "Изменить их значения, переместив содержимое A в C, C — в B, B — в A, и вывести новые значения переменных A, B, C.");
         System.out.println("Первая переменная: ");
@@ -284,10 +284,18 @@ class Begin {
         C = temp;
         System.out.println("1: " + A + " 2: " + B + " 3: " + C);
     }
-    public void begin25(){
+
+    public void begin25() {
         System.out.println("Begin25. Найти значение функции y = 3x^6 − 6x^2 − 7 при данном значении x.");
         System.out.println("Введите х");
         double x = myScan.nextDouble();
-        System.out.println("Ответ: " + (3 * Math.pow(x,6) - 6 * Math.pow(x,2) - 7));
+        System.out.println("Ответ: " + (3 * Math.pow(x, 6) - 6 * Math.pow(x, 2) - 7));
+    }
+
+    public void begin26() {
+        System.out.println("Begin26. Найти значение функции y = 4(x−3)^6 − 7(x−3)^3 + 2 при данном значении x.");
+        System.out.println("Введите х");
+        double x = myScan.nextDouble();
+        System.out.println("Ответ: " + ((4 * Math.pow(x - 3, 6)) - (7 * Math.pow(x - 3, 3)) + 2));
     }
 }
