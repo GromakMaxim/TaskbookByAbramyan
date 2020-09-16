@@ -130,4 +130,10 @@ class Begin {
         System.out.println("Диаметр: " + diameter);
         System.out.println("Длина: " + 2 * Math.PI * diameter);
     }
+    public void begin16(){
+        System.out.println("Begin16. Найти расстояние между двумя точками с заданными координатами x1 и x2 " +
+                "на числовой оси: |x2 − x1|.");
+        System.out.println("Введите координаты двух точек, чтобы найти расстояние между ними");
+        System.out.println("Расстояние между двумя точками: " + Math.abs(myScan.nextInt() - myScan.nextInt()));
+    }
 }
