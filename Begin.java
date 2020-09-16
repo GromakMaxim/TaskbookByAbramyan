@@ -413,4 +413,19 @@ class Begin {
         System.out.println("Путь лодки по озеру: " + (speedInLake * timeLake));
         System.out.println("Путь лодки по реке против течения: " + (speedInLake - speedRiverFlow) * timeRiver);
     }
+
+    public void begin36() {
+        System.out.println("Begin36. Скорость первого автомобиля V1 км/ч, второго — V2 км/ч, " +
+                "расстояние между ними S км. Определить расстояние между ними через T часов, " +
+                "если автомобили удаляются друг от друга, двигаясь в противоположных направлениях. " +
+                "Данное расстояние равно сумме начального расстояния и общего пути, проделанного автомобилями; " +
+                "общий путь = время · суммарная скорость.");
+        System.out.println("Скорость 1 авто: ");
+        double speedFirstCar = myScan.nextDouble();
+        System.out.println("Скорость 2 авто: ");
+        double speedSecondCar = myScan.nextDouble();
+        System.out.println("Время в пути: ");
+        double travelTime = myScan.nextDouble();
+        System.out.println("Общий путь: " + (speedFirstCar + speedSecondCar) * travelTime);
+    }
 }
