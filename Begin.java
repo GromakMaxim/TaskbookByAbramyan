@@ -57,4 +57,10 @@ class Begin {
         System.out.println("Длина окружности: " + 2 * Math.PI * radius);
         System.out.println("Площадь круга: " + Math.PI * Math.pow(radius, 2));
     }
+
+    public void begin8() {
+        System.out.println("Begin8. Даны два числа a и b. Найти их среднее арифметическое: (a + b)/2");
+        System.out.println("Введите 2 числа, чтобы узнать их среднее арифметическое");
+        System.out.println((double) (myScan.nextInt() + myScan.nextInt()) / 2);
+    }
 }
