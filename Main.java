@@ -21,6 +21,9 @@ public class Main {
                 case 4:
                     begin.begin4();
                     break;
+                case 5:
+                    begin.begin5();
+                    break;
             }
         }
     }
