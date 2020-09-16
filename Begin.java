@@ -377,4 +377,23 @@ class Begin {
         System.out.println("Введите количество кг для расчета итоговой стоимости");
         System.out.println("Ответ: " + myScan.nextDouble() * pricePerKG);
     }
+
+    public void begin34(){
+        System.out.println("Begin34. Известно, что X кг шоколадных конфет стоит A рублей, а Y кг ирисок стоит B рублей. " +
+                "Определить, сколько стоит 1 кг шоколадных конфет, 1 кг ирисок, " +
+                "а также во сколько раз шоколадные конфеты дороже ирисок.");
+        System.out.println("Вес шоколадных конфет: ");
+        double weightChocolate = myScan.nextDouble();
+        System.out.println("Общая стоимость шоколадных конфет");
+        double priceChocolate = myScan.nextDouble();
+        System.out.println("Вес ирисок: ");
+        double weightToffee = myScan.nextDouble();
+        System.out.println("Общая стоимость ирисок");
+        double priceToffee = myScan.nextDouble();
+
+        System.out.println("1кг шоколадных конфет стоит: " + priceChocolate / weightChocolate);
+        System.out.println("1кг ирисок стоит: " + priceToffee / weightToffee);
+        System.out.println("Шоколадные конфеты дороже ирисок в " + (priceChocolate / weightChocolate) / (priceToffee / weightToffee));
+        
+    }
 }
