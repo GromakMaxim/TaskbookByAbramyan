@@ -141,7 +141,6 @@ class Begin {
     public void begin17() {
         System.out.println("Begin17. Даны три точки A, B, C на числовой оси. Найти длины отрезков AC и BC и их сумму.");
         System.out.println("Введите координаты точек А B C, чтобы найти длины отрезков AC, BC и их сумму");
-        Scanner myScan = new Scanner(System.in);
         int coordA = myScan.nextInt();
         int coordB = myScan.nextInt();
         int coordC = myScan.nextInt();
@@ -151,5 +150,14 @@ class Begin {
         System.out.println("Длина AC: " + AC);
         System.out.println("Длина BC: " + BC);
         System.out.println("AC + BC: " + (AC + BC));
+    }
+
+    public void begin18() {
+        System.out.println("Begin18. Введите координаты точек А B C, чтобы найти произведение длин отрезков AC BC");
+        int coordA = myScan.nextInt();
+        int coordB = myScan.nextInt();
+        int coordC = myScan.nextInt();
+
+        System.out.println("AC * BC: " + (coordA - coordC) * (coordB - coordC));
     }
 }
