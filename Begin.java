@@ -121,7 +121,7 @@ class Begin {
         System.out.println("Площадь: " + Math.PI * Math.pow(radius, 2));
     }
 
-    public void begin15(){
+    public void begin15() {
         System.out.println("Begin15. Дана площадь S круга. " +
                 "Найти его диаметр D и длину L окружности, ограничивающей этот круг, учитывая, что L = π·D, S = π·D^2 /4.");
         System.out.println("Введите площадь круга, чтобы найти его диаметр и длину");
@@ -130,10 +130,26 @@ class Begin {
         System.out.println("Диаметр: " + diameter);
         System.out.println("Длина: " + 2 * Math.PI * diameter);
     }
-    public void begin16(){
+
+    public void begin16() {
         System.out.println("Begin16. Найти расстояние между двумя точками с заданными координатами x1 и x2 " +
                 "на числовой оси: |x2 − x1|.");
         System.out.println("Введите координаты двух точек, чтобы найти расстояние между ними");
         System.out.println("Расстояние между двумя точками: " + Math.abs(myScan.nextInt() - myScan.nextInt()));
+    }
+
+    public void begin17() {
+        System.out.println("Begin17. Даны три точки A, B, C на числовой оси. Найти длины отрезков AC и BC и их сумму.");
+        System.out.println("Введите координаты точек А B C, чтобы найти длины отрезков AC, BC и их сумму");
+        Scanner myScan = new Scanner(System.in);
+        int coordA = myScan.nextInt();
+        int coordB = myScan.nextInt();
+        int coordC = myScan.nextInt();
+        int AC = Math.abs(coordA - coordC);
+        int BC = Math.abs(coordB - coordC);
+
+        System.out.println("Длина AC: " + AC);
+        System.out.println("Длина BC: " + BC);
+        System.out.println("AC + BC: " + (AC + BC));
     }
 }
