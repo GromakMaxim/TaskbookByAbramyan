@@ -72,8 +72,7 @@ class Begin {
     }
 
     public void begin10() {
-        System.out.println("Введите 2 ненулевых числа, чтобы получить сумму, разность, произведение и частное их квадратов");
-        Scanner myScan = new Scanner(System.in);
+        System.out.println("Begin10. Введите 2 ненулевых числа, чтобы получить сумму, разность, произведение и частное их квадратов");
         double firstValue = Math.pow(myScan.nextInt(), 2);
         double secondValue = Math.pow(myScan.nextInt(), 2);
         System.out.println("Сумма квадратов: " + (firstValue + secondValue));
@@ -82,4 +81,14 @@ class Begin {
         System.out.println("Частное квадратов: " + (firstValue / secondValue));
     }
 
+    public void begin11() {
+        System.out.println("Begin11. Введите 2 ненулевых числа, чтобы получить их сумму, разность, произведение и частное их модулей");
+        int firstValue = Math.abs(myScan.nextInt());
+        int secondValue = Math.abs(myScan.nextInt());
+        System.out.println("Сумма: " + (firstValue + secondValue));
+        System.out.println("Разность: " + (firstValue - secondValue));
+        System.out.println("Произведение: " + (firstValue * secondValue));
+        System.out.println("Частное: " + (firstValue / secondValue));
+
+    }
 }
