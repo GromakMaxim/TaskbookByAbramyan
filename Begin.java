@@ -101,14 +101,23 @@ class Begin {
     }
 
     public void begin13() {
-        System.out.println("Даны два круга с общим центром и радиусами R1 и R2 (R1 > R2). " +
+        System.out.println("Begin13. Даны два круга с общим центром и радиусами R1 и R2 (R1 > R2). " +
                 "Найти площади этих кругов S1 и S2, а также площадь S3 кольца, " +
                 "внешний радиус которого равен R1, а внутренний радиус равен R2:");
         System.out.println("Введите R1, R2");
-        int r1 = myScan.nextInt();
-        int r2 = myScan.nextInt();
-        System.out.println("Площадь первого круга: " + Math.PI * Math.pow(r1, 2));
-        System.out.println("Площадь второго круга: " + Math.PI * Math.pow(r2, 2));
-        System.out.println("Площадь кольца: " + (r1 - r2));
+        double s1 = Math.PI * Math.pow(myScan.nextInt(), 2);
+        double s2 = Math.PI * Math.pow(myScan.nextInt(), 2);
+        System.out.println("Площадь первого круга: " + s1);
+        System.out.println("Площадь второго круга: " + s2);
+        System.out.println("Площадь кольца: " + (s1 - s2));
+    }
+
+    public void begin14() {
+        System.out.println("Begin14. Дана длина L окружности. " +
+                "Найти ее радиус R и площадь S круга, ограниченного этой окружностью, учитывая, что L = 2·π·R, S = π·R^2");
+        System.out.println("Введите длину окружности, чтобы найти её радиус и площадь круга, ограниченного этой окружностью");
+        double radius = myScan.nextInt() / (2 * Math.PI);
+        System.out.println("Радиус: " + radius);
+        System.out.println("Площадь: " + Math.PI * Math.pow(radius, 2));
     }
 }
