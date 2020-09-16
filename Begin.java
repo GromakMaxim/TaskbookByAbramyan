@@ -63,4 +63,11 @@ class Begin {
         System.out.println("Введите 2 числа, чтобы узнать их среднее арифметическое");
         System.out.println((double) (myScan.nextInt() + myScan.nextInt()) / 2);
     }
+
+    public void begin9() {
+        System.out.println("Begin9. Даны два неотрицательных числа a и b. " +
+                "Найти их среднее геометрическое, т. е. квадратный корень из их произведения: (a·b)^(1/2)");
+        System.out.println("Введите 2 неотрицательных числа, чтобы чтобы найти их среднее геометрическое");
+        System.out.println("Среднее геометрическое: " + Math.sqrt(myScan.nextInt() * myScan.nextInt()));
+    }
 }
