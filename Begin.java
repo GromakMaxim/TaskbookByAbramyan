@@ -31,10 +31,21 @@ class Begin {
     }
 
     public void begin5() {
+        System.out.println("Begin5. Дана длина ребра куба a. Найти объем куба V = a^3 и площадь его поверхности S = 6·a^2.");
         System.out.println("Введите длину ребра куба, чтобы найти его объём и площадь поверхности");
         int edge = myScan.nextInt();
         System.out.println("Объём куба: " + Math.pow(edge, 3));
         System.out.println("Площадь поверхности: " + 6 * (Math.pow(edge, 2)));
     }
 
+    public void begin6() {
+        System.out.println("Begin6. Даны длины ребер a, b, c прямоугольного параллелепипеда. " +
+                "Найти его объем V = a·b·c и площадь поверхности S = 2·(a·b + b·c + a·c)");
+        System.out.println("Введите длины двух ребёр, чтобы найти объём прямоугольного параллелепипеда и площадь его поверхности");
+        int edge1 = myScan.nextInt();
+        int edge2 = myScan.nextInt();
+        int edge3 = myScan.nextInt();
+        System.out.println("Объём: " + edge1 * edge2 * edge3);
+        System.out.println("Площадь поверхности: " + 2 * (edge1 * edge2 + edge2 * edge3 + edge1 * edge3));
+    }
 }

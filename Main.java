@@ -24,6 +24,12 @@ public class Main {
                 case 5:
                     begin.begin5();
                     break;
+                case 6:
+                    begin.begin6();
+                    break;
+                default:
+                    System.out.println("Введите номер задачи 1-40");
+                    break;
             }
         }
     }
