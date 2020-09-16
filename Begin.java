@@ -100,4 +100,15 @@ class Begin {
         System.out.println("Периметр: " + cathetus1 + cathetus2 + hypotenuse);
     }
 
+    public void begin13() {
+        System.out.println("Даны два круга с общим центром и радиусами R1 и R2 (R1 > R2). " +
+                "Найти площади этих кругов S1 и S2, а также площадь S3 кольца, " +
+                "внешний радиус которого равен R1, а внутренний радиус равен R2:");
+        System.out.println("Введите R1, R2");
+        int r1 = myScan.nextInt();
+        int r2 = myScan.nextInt();
+        System.out.println("Площадь первого круга: " + Math.PI * Math.pow(r1, 2));
+        System.out.println("Площадь второго круга: " + Math.PI * Math.pow(r2, 2));
+        System.out.println("Площадь кольца: " + (r1 - r2));
+    }
 }
