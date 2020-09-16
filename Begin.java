@@ -73,8 +73,8 @@ class Begin {
 
     public void begin10() {
         System.out.println("Begin10. Введите 2 ненулевых числа, чтобы получить сумму, разность, произведение и частное их квадратов");
-        double firstValue = Math.pow(myScan.nextInt(), 2);
-        double secondValue = Math.pow(myScan.nextInt(), 2);
+        double firstValue = Math.pow(myScan.nextDouble(), 2);
+        double secondValue = Math.pow(myScan.nextDouble(), 2);
         System.out.println("Сумма квадратов: " + (firstValue + secondValue));
         System.out.println("Разность квадратов: " + (firstValue + secondValue));
         System.out.println("Произведение квадратов: " + (firstValue * secondValue));
@@ -93,8 +93,8 @@ class Begin {
 
     public void begin12() {
         System.out.println("Begin12. Введите 2 катета прямоугольного треугольника, чтобы найти его гипотенузу и периметр");
-        double cathetus1 = myScan.nextInt();
-        double cathetus2 = myScan.nextInt();
+        double cathetus1 = myScan.nextDouble();
+        double cathetus2 = myScan.nextDouble();
         double hypotenuse = Math.sqrt(Math.pow(cathetus1, 2) + Math.pow(cathetus2, 2));
         System.out.println("Гипотенуза: " + hypotenuse);
         System.out.println("Периметр: " + cathetus1 + cathetus2 + hypotenuse);
@@ -105,8 +105,8 @@ class Begin {
                 "Найти площади этих кругов S1 и S2, а также площадь S3 кольца, " +
                 "внешний радиус которого равен R1, а внутренний радиус равен R2:");
         System.out.println("Введите R1, R2");
-        double s1 = Math.PI * Math.pow(myScan.nextInt(), 2);
-        double s2 = Math.PI * Math.pow(myScan.nextInt(), 2);
+        double s1 = Math.PI * Math.pow(myScan.nextDouble(), 2);
+        double s2 = Math.PI * Math.pow(myScan.nextDouble(), 2);
         System.out.println("Площадь первого круга: " + s1);
         System.out.println("Площадь второго круга: " + s2);
         System.out.println("Площадь кольца: " + (s1 - s2));
@@ -116,7 +116,7 @@ class Begin {
         System.out.println("Begin14. Дана длина L окружности. " +
                 "Найти ее радиус R и площадь S круга, ограниченного этой окружностью, учитывая, что L = 2·π·R, S = π·R^2");
         System.out.println("Введите длину окружности, чтобы найти её радиус и площадь круга, ограниченного этой окружностью");
-        double radius = myScan.nextInt() / (2 * Math.PI);
+        double radius = myScan.nextDouble() / (2 * Math.PI);
         System.out.println("Радиус: " + radius);
         System.out.println("Площадь: " + Math.PI * Math.pow(radius, 2));
     }
@@ -125,7 +125,7 @@ class Begin {
         System.out.println("Begin15. Дана площадь S круга. " +
                 "Найти его диаметр D и длину L окружности, ограничивающей этот круг, учитывая, что L = π·D, S = π·D^2 /4.");
         System.out.println("Введите площадь круга, чтобы найти его диаметр и длину");
-        double area = myScan.nextInt();
+        double area = myScan.nextDouble();
         double diameter = Math.sqrt(area / Math.PI) * 2;
         System.out.println("Диаметр: " + diameter);
         System.out.println("Длина: " + 2 * Math.PI * diameter);
@@ -283,5 +283,11 @@ class Begin {
         B = C;
         C = temp;
         System.out.println("1: " + A + " 2: " + B + " 3: " + C);
+    }
+    public void begin25(){
+        System.out.println("Begin25. Найти значение функции y = 3x^6 − 6x^2 − 7 при данном значении x.");
+        System.out.println("Введите х");
+        double x = myScan.nextDouble();
+        System.out.println("Ответ: " + (3 * Math.pow(x,6) - 6 * Math.pow(x,2) - 7));
     }
 }
