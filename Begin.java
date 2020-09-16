@@ -89,6 +89,15 @@ class Begin {
         System.out.println("Разность: " + (firstValue - secondValue));
         System.out.println("Произведение: " + (firstValue * secondValue));
         System.out.println("Частное: " + (firstValue / secondValue));
-
     }
+
+    public void begin12() {
+        System.out.println("Begin12. Введите 2 катета прямоугольного треугольника, чтобы найти его гипотенузу и периметр");
+        double cathetus1 = myScan.nextInt();
+        double cathetus2 = myScan.nextInt();
+        double hypotenuse = Math.sqrt(Math.pow(cathetus1, 2) + Math.pow(cathetus2, 2));
+        System.out.println("Гипотенуза: " + hypotenuse);
+        System.out.println("Периметр: " + cathetus1 + cathetus2 + hypotenuse);
+    }
+
 }
