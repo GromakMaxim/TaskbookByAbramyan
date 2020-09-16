@@ -120,4 +120,14 @@ class Begin {
         System.out.println("Радиус: " + radius);
         System.out.println("Площадь: " + Math.PI * Math.pow(radius, 2));
     }
+
+    public void begin15(){
+        System.out.println("Begin15. Дана площадь S круга. " +
+                "Найти его диаметр D и длину L окружности, ограничивающей этот круг, учитывая, что L = π·D, S = π·D^2 /4.");
+        System.out.println("Введите площадь круга, чтобы найти его диаметр и длину");
+        double area = myScan.nextInt();
+        double diameter = Math.sqrt(area / Math.PI) * 2;
+        System.out.println("Диаметр: " + diameter);
+        System.out.println("Длина: " + 2 * Math.PI * diameter);
+    }
 }
