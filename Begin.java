@@ -314,4 +314,24 @@ class Begin {
         temp = temp * temp;
         System.out.println("в восьмой- " + temp);
     }
+
+    public void begin28() {
+        System.out.println("Begin28. Дано число A. " +
+                "Вычислить A15, используя две вспомогательные переменные и пять операций умножения. " +
+                "Для этого последовательно находить A2, A3, A5, A10, A15. Вывести все найденные степени числа A.");
+        System.out.println("Введите число А");
+        double A = myScan.nextDouble();
+        double temp1;
+        double temp2;
+        temp1 = A * A;
+        System.out.println("в квадрате- " + temp1);
+        temp2 = temp1 * A;
+        System.out.println("в кубе- " + temp2);
+        temp1 = temp2 * temp1;
+        System.out.println("в пятой- " + temp1);
+        temp2 = temp1 * temp1;
+        System.out.println("в десятой- " + temp2);
+        temp1 = temp2 * temp1;
+        System.out.println("в 15- " + temp1);
+    }
 }
