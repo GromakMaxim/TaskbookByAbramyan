@@ -428,4 +428,28 @@ class Begin {
         double travelTime = myScan.nextDouble();
         System.out.println("Общий путь: " + (speedFirstCar + speedSecondCar) * travelTime);
     }
+
+    public void begin37(){
+        System.out.println("Begin37. Скорость первого автомобиля V1 км/ч, второго — V2 км/ч, расстояние между ними S км. " +
+                "Определить расстояние между ними через T часов, если автомобили первоначально движутся навстречу друг другу. " +
+                "Данное расстояние равно модулю разности начального расстояния и общего пути, проделанного автомобилями; " +
+                "общий путь = время · суммарная скорость.");
+        System.out.println("Скорость 1 авто: ");
+        double speedFirstCar = myScan.nextDouble();
+        System.out.println("Скорость 2 авто: ");
+        double speedSecondCar = myScan.nextDouble();
+        System.out.println("Расстояние между ними: ");
+        double distance = myScan.nextDouble();
+        System.out.println("Время: ");
+        double time = myScan.nextDouble();
+        System.out.println("Расстояние: " + (distance - (speedFirstCar+speedSecondCar)*time));
+    }
+    public void begin38(){
+        System.out.println("Begin38. Решить линейное уравнение A·x + B = 0, " +
+                "заданное своими коэффициентами A и B (коэффициент A не равен 0).");
+        System.out.println("Введите коэффициенты А и B");
+        double A = myScan.nextDouble();
+        double B = myScan.nextDouble();
+        System.out.println("Ответ: " + (-B / A));
+    }
 }
