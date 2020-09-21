@@ -1,14 +1,82 @@
 import java.util.Scanner;
 
 public class Main {
+    static Scanner myScan = new Scanner(System.in);
 
     public static void main(String[] args) {
-        Begin begin = new Begin();
-        Scanner myScan = new Scanner(System.in);
         while (true) {
+            System.out.println("Введите номер блока: (в скобках указано количество заданий для каждой группы)");
+            System.out.println("1. Begin — ввод и вывод данных, оператор присваивания (40),\n" +
+                    "2. Integer — целые числа (30),\n" +
+                    "3. Boolean — логические выражения (40),\n" +
+                    "4. If — условный оператор (30),\n" +
+                    "5. Case — оператор выбора (20),\n" +
+                    "6. For — цикл с параметром (40),\n" +
+                    "7. While — цикл с условием (30),\n" +
+                    "8. Series — последовательности (40),\n" +
+                    "9. Proc — процедуры и функции (60),\n" +
+                    "10. Minmax — минимумы и максимумы (30),\n" +
+                    "11. Array — одномерные массивы (140),\n" +
+                    "12. Matrix — двумерные массивы (матрицы) (100),\n" +
+                    "13. String — символы и строки (70),\n" +
+                    "14. File — двоичные файлы (90),\n" +
+                    "15. Text — текстовые файлы (60),\n" +
+                    "16. Param — составные типы данных в процедурах и функциях (70),\n" +
+                    "17. Recur — рекурсия (30),\n" +
+                    "18. Dynamic — динамические структуры данных (80).");
+            int groupSelection = myScan.nextInt();
+            switch (groupSelection) {
+                case 1:
+                    beginTask();
+                    break;
+                case 2:
+                    integerTask();
+                    break;
+                case 3:
+                    break;
+                case 4:
+                    break;
+                case 5:
+                    break;
+                case 6:
+                    break;
+                case 7:
+                    break;
+                case 8:
+                    break;
+                case 9:
+                    break;
+                case 10:
+                    break;
+                case 11:
+                    break;
+                case 12:
+                    break;
+                case 13:
+                    break;
+                case 14:
+                    break;
+                case 15:
+                    break;
+                case 16:
+                    break;
+                case 17:
+                    break;
+                case 18:
+                    break;
+                default:
+                    System.out.println("Введите номер блока 1-18");
+                    break;
+            }
+        }
+    }
+
+    static void beginTask() {
+        while (true) {
+            Begin begin = new Begin();
             System.out.println("Введите номер задачи из блока BEGIN (1-40)");
-            int menuPoint = myScan.nextInt();
-            switch (menuPoint) {
+            int beginMenuPoint = myScan.nextInt();
+            switch (beginMenuPoint) {
                 case 1:
                     begin.begin1();
                     break;
@@ -131,6 +199,18 @@ public class Main {
                     break;
                 default:
                     System.out.println("Введите номер задачи 1-40");
+                    break;
+            }
+        }
+    }
+    static void integerTask() {
+        while (true) {
+            IntegerTasks integerTasks = new IntegerTasks();
+            System.out.println("Введите номер задачи из блока INTEGER (1-30)");
+            int integerMenuPoint = myScan.nextInt();
+            switch (integerMenuPoint) {
+                case 1:
+                    integerTasks.integer1();
                     break;
             }
         }
