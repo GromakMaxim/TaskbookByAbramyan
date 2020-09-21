@@ -10,4 +10,11 @@ public class IntegerTasks {
         System.out.println("Количество полных метров в нём: " + myScan.nextInt() / 100);
 
     }
+
+    public void integer2(){
+        System.out.println("Integer2. Дана масса M в килограммах. " +
+                "Используя операцию деления нацело, найти количество полных тонн в ней (1 тонна = 1000 кг).");
+        System.out.println("Введите массу в кг");
+        System.out.println("Кол-во полных тонн: " + myScan.nextInt() / 1000);
+    }
 }

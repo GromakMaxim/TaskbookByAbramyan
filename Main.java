@@ -203,6 +203,7 @@ public class Main {
             }
         }
     }
+
     static void integerTask() {
         while (true) {
             IntegerTasks integerTasks = new IntegerTasks();
@@ -212,6 +213,11 @@ public class Main {
                 case 1:
                     integerTasks.integer1();
                     break;
+                case 2:
+                    integerTasks.integer2();
+                    break;
+                default:
+                    System.out.println("Введите номер задачи 1-30");
             }
         }
     }
