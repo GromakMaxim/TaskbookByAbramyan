@@ -1,3 +1,5 @@
+import jdk.swing.interop.SwingInterOpUtils;
+
 import java.sql.SQLOutput;
 import java.util.Scanner;
 
@@ -429,7 +431,7 @@ class Begin {
         System.out.println("Общий путь: " + (speedFirstCar + speedSecondCar) * travelTime);
     }
 
-    public void begin37(){
+    public void begin37() {
         System.out.println("Begin37. Скорость первого автомобиля V1 км/ч, второго — V2 км/ч, расстояние между ними S км. " +
                 "Определить расстояние между ними через T часов, если автомобили первоначально движутся навстречу друг другу. " +
                 "Данное расстояние равно модулю разности начального расстояния и общего пути, проделанного автомобилями; " +
@@ -442,14 +444,42 @@ class Begin {
         double distance = myScan.nextDouble();
         System.out.println("Время: ");
         double time = myScan.nextDouble();
-        System.out.println("Расстояние: " + (distance - (speedFirstCar+speedSecondCar)*time));
+        System.out.println("Расстояние: " + (distance - (speedFirstCar + speedSecondCar) * time));
     }
-    public void begin38(){
+
+    public void begin38() {
         System.out.println("Begin38. Решить линейное уравнение A·x + B = 0, " +
                 "заданное своими коэффициентами A и B (коэффициент A не равен 0).");
         System.out.println("Введите коэффициенты А и B");
         double A = myScan.nextDouble();
         double B = myScan.nextDouble();
         System.out.println("Ответ: " + (-B / A));
+    }
+
+    public void begin39() {
+        System.out.println("Begin39. Найти корни квадратного уравнения A·x^2 + B·x + C = 0, " +
+                "заданного своими коэффициентами A, B, C (коэффициент A не равен 0), \n" +
+                "если известно, что дискриминант уравнения положителен. " +
+                "Вывести вначале меньший, а затем больший из найденных корней. " +
+                "Корни квадратного уравнения находятся по формуле\n" +
+                "x1,2 = (−B ± D^1/2)/(2·A),\n" +
+                "\n" +
+                "где D — дискриминант, равный B^2 − 4·A·C.");
+        System.out.println("Введите А");
+        double A = myScan.nextDouble();
+        System.out.println("Введите B");
+        double B = myScan.nextDouble();
+        System.out.println("Введите C");
+        double C = myScan.nextDouble();
+
+        double D = Math.pow(B, 2) - 4 * A * C;//дискриминант
+        if (D < 0) {
+            System.out.println("Уравнение не имеет корней");
+        } else if (D == 0) {
+            System.out.println("Первый корень, Х1=" + (-B / (2 * A)));
+        } else if (D > 0) {
+            System.out.println("Первый корень, Х1=" + (-B - Math.sqrt(D)) / (2 * A));
+            System.out.println("Второй корень, Х2=" + (-B + Math.sqrt(D)) / (2 * A));
+        }
     }
 }
