@@ -482,4 +482,33 @@ class Begin {
             System.out.println("Второй корень, Х2=" + (-B + Math.sqrt(D)) / (2 * A));
         }
     }
+
+    public void begin40() {
+        System.out.println("Begin40. Найти решение системы линейных уравнений вида\n" +
+                "A1·x + B1·y = C1,\n" +
+                "A2·x + B2·y = C2,\n" +
+                "\n" +
+                "заданной своими коэффициентами A1, B1, C1, A2, B2, C2, " +
+                "если известно, что данная система имеет единственное решение. Воспользоваться формулами\n" +
+                "x = (C1·B2 − C2·B1)/D, y = (A1·C2 − A2·C1)/D,\n" +
+                "\n" +
+                "где D = A1·B2 − A2·B1.");
+
+        System.out.println("Введите А1");
+        double A1 = myScan.nextDouble();
+        System.out.println("Введите B1");
+        double B1 = myScan.nextDouble();
+        System.out.println("Введите C1");
+        double C1 = myScan.nextDouble();
+        System.out.println("Введите А2");
+        double A2 = myScan.nextDouble();
+        System.out.println("Введите B2");
+        double B2 = myScan.nextDouble();
+        System.out.println("Введите C2");
+        double C2 = myScan.nextDouble();
+
+        double D = A1 * B2 - A2 * B1;
+        System.out.println("x=" + (C1 * B2 - C2 * B1) / D);
+        System.out.println("y=" + (A1 * C2 - A2 * C1) / D);
+    }
 }
