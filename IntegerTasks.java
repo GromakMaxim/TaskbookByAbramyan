@@ -47,4 +47,15 @@ public class IntegerTasks {
         double B = Math.abs(myScan.nextDouble());
         System.out.println("Ответ: " + A % B);
     }
+
+    public void integer6() {
+        System.out.println("Integer6. Дано двузначное число. " +
+                "Вывести вначале его левую цифру (десятки), а затем — его правую цифру (единицы). \n" +
+                "Для нахождения десятков использовать операцию деления нацело, " +
+                "для нахождения единиц — операцию взятия остатка от деления.");
+        System.out.println("Введите двузначное число: ");
+        int value = myScan.nextInt();
+        System.out.println("Левая цифра: " + value / 10);
+        System.out.println("Правая цифра: " + value % 10);
+    }
 }
