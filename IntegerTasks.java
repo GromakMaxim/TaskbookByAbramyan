@@ -82,4 +82,12 @@ public class IntegerTasks {
         int value = myScan.nextInt();
         System.out.println("Ответ: " + value / 100);
     }
+
+    public void integer10() {
+        System.out.println("Integer10. Дано трехзначное число. " +
+                "Вывести вначале его последнюю цифру (единицы), а затем — его среднюю цифру (десятки).");
+        System.out.println("Введите трехзначное число: ");
+        int value = myScan.nextInt();
+        System.out.println("Ответ: " + (value % 100 % 10) + (value % 100 / 10));
+    }
 }

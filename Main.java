@@ -237,6 +237,9 @@ public class Main {
                 case 9:
                     integerTasks.integer9();
                     break;
+                case 10:
+                    integerTasks.integer10();
+                    break;
                 default:
                     System.out.println("Введите номер задачи 1-30");
             }
