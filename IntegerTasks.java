@@ -79,8 +79,7 @@ public class IntegerTasks {
         System.out.println("Integer9. Дано трехзначное число. " +
                 "Используя одну операцию деления нацело, вывести первую цифру данного числа (сотни).");
         System.out.println("Введите трехзначное число: ");
-        int value = myScan.nextInt();
-        System.out.println("Ответ: " + value / 100);
+        System.out.println("Ответ: " + (myScan.nextInt() / 100));
     }
 
     public void integer10() {
@@ -145,23 +144,28 @@ public class IntegerTasks {
                 "Используя одну операцию деления нацело и одну операцию взятия остатка от деления, \n" +
                 "найти цифру, соответствующую разряду сотен в записи этого числа.");
         System.out.println("Введите число > 999: ");
-        int value = myScan.nextInt();
-        System.out.println("Ответ: " + value / 100 % 10);
+        System.out.println("Ответ: " + (myScan.nextInt() / 100 % 10));
     }
 
-    public void integer18(){
+    public void integer18() {
         System.out.println("Integer18. Дано целое число, большее 999. \n" +
                 "Используя одну операцию деления нацело и одну операцию взятия остатка от деления, найти цифру, " +
                 "соответствующую разряду тысяч в записи этого числа.");
         System.out.println("Введите число > 999: ");
-        int value = myScan.nextInt();
-        System.out.println("Ответ: " + value / 1000 % 10);
+        System.out.println("Ответ: " + (myScan.nextInt() / 1000 % 10));
     }
-    public void integer19(){
+
+    public void integer19() {
         System.out.println("Integer19. С начала суток прошло N секунд (N — целое). " +
                 "Найти количество полных минут, прошедших с начала суток.");
         System.out.println("Введите кол-во секунд: ");
-        int seconds = myScan.nextInt();
-        System.out.println("Ответ: " + seconds / 60);
+        System.out.println("Ответ: " + myScan.nextInt() / 60);
+    }
+
+    public void integer20() {
+        System.out.println("Integer20. С начала суток прошло N секунд (N — целое). " +
+                "Найти количество полных часов, прошедших с начала суток.");
+        System.out.println("Введите кол-во секунд: ");
+        System.out.println("Ответ: " + myScan.nextInt() / 60 / 60);
     }
 }
