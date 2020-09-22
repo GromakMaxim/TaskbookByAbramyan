@@ -122,4 +122,13 @@ public class IntegerTasks {
         int value = myScan.nextInt();
         System.out.println("Ответ: " + value % 100 % 10 + value / 100 + value % 100 / 10);
     }
+
+    public void integer15() {
+        System.out.println("Integer15. Дано трехзначное число. " +
+                "Вывести число, полученное при перестановке цифр сотен и десятков исходного числа " +
+                "(например, 123 перейдет в 213).");
+        System.out.println("Введите трехзначное число: ");
+        int value = myScan.nextInt();
+        System.out.println("Ответ: " + value % 100 / 10 + value / 100 + value % 100 % 10);
+    }
 }
