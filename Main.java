@@ -285,6 +285,15 @@ public class Main {
                 case 25:
                     integerTasks.integer25();
                     break;
+                case 26:
+                    integerTasks.integer26();
+                    break;
+                case 27:
+                    integerTasks.integer27();
+                    break;
+                case 28:
+                    integerTasks.integer28();
+                    break;
                 default:
                     System.out.println("Введите номер задачи 1-30");
             }
