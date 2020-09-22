@@ -25,4 +25,15 @@ public class IntegerTasks {
         System.out.println("Введите размер файла в байтах");
         System.out.println("Кол-во КБ: " + myScan.nextInt() / 1024);
     }
+
+    public void integer4() {
+        System.out.println("Integer4. Даны целые положительные числа A и B (A > B). " +
+                "На отрезке длины A размещено максимально возможное количество отрезков длины B (без наложений). " +
+                "Используя операцию деления нацело, найти количество отрезков B, размещенных на отрезке A.");
+        System.out.println("Введите А");
+        double A = Math.abs(myScan.nextDouble());
+        System.out.println("Введите B");
+        double B = Math.abs(myScan.nextDouble());
+        System.out.println("Ответ: " + (int) (A / B));
+    }
 }
