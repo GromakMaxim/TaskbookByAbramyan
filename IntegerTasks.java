@@ -59,11 +59,19 @@ public class IntegerTasks {
         System.out.println("Правая цифра: " + value % 10);
     }
 
-    public void integer7(){
+    public void integer7() {
         System.out.println("Integer7. Дано двузначное число. Найти сумму и произведение его цифр.");
         System.out.println("Введите двузначное число: ");
         int value = myScan.nextInt();
         System.out.println("Сумма: " + (value / 10 + value % 10));
         System.out.println("Произведение: " + (value / 10) * (value % 10));
+    }
+
+    public void integer8() {
+        System.out.println("Integer8. Дано двузначное число. " +
+                "Вывести число, полученное при перестановке цифр исходного числа.");
+        System.out.println("Введите двузначное число: ");
+        int value = myScan.nextInt();
+        System.out.println("Ответ: " + (value % 10) + (value / 10));
     }
 }
