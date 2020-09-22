@@ -114,4 +114,12 @@ public class IntegerTasks {
         int value = myScan.nextInt();
         System.out.println("Ответ: " + value % 100 / 10 + value % 100 % 10 + value / 100);
     }
+
+    public void integer14() {
+        System.out.println("Integer14. Дано трехзначное число. " +
+                "В нем зачеркнули первую справа цифру и приписали ее слева. Вывести полученное число.");
+        System.out.println("Введите трехзначное число: ");
+        int value = myScan.nextInt();
+        System.out.println("Ответ: " + value % 100 % 10 + value / 100 + value % 100 / 10);
+    }
 }
