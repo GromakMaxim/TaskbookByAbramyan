@@ -139,4 +139,13 @@ public class IntegerTasks {
         int value = myScan.nextInt();
         System.out.println("Ответ: " + value / 100 + value % 100 % 10 + value % 100 / 10);
     }
+
+    public void integer17() {
+        System.out.println("Integer17. Дано целое число, большее 999. " +
+                "Используя одну операцию деления нацело и одну операцию взятия остатка от деления, \n" +
+                "найти цифру, соответствующую разряду сотен в записи этого числа.");
+        System.out.println("Введите число > 999: ");
+        int value = myScan.nextInt();
+        System.out.println("Ответ: " + value / 100 % 10);
+    }
 }
