@@ -168,4 +168,11 @@ public class IntegerTasks {
         System.out.println("Введите кол-во секунд: ");
         System.out.println("Ответ: " + myScan.nextInt() / 60 / 60);
     }
+
+    public void integer21() {
+        System.out.println("Integer21. С начала суток прошло N секунд (N — целое). " +
+                "Найти количество секунд, прошедших с начала последней минуты.");
+        System.out.println("Введите кол-во секунд: ");
+        System.out.println("Ответ: " + myScan.nextInt() % 60);
+    }
 }
