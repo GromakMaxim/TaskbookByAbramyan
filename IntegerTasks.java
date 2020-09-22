@@ -157,4 +157,11 @@ public class IntegerTasks {
         int value = myScan.nextInt();
         System.out.println("Ответ: " + value / 1000 % 10);
     }
+    public void integer19(){
+        System.out.println("Integer19. С начала суток прошло N секунд (N — целое). " +
+                "Найти количество полных минут, прошедших с начала суток.");
+        System.out.println("Введите кол-во секунд: ");
+        int seconds = myScan.nextInt();
+        System.out.println("Ответ: " + seconds / 60);
+    }
 }
