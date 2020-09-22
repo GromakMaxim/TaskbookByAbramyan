@@ -74,4 +74,12 @@ public class IntegerTasks {
         int value = myScan.nextInt();
         System.out.println("Ответ: " + (value % 10) + (value / 10));
     }
+
+    public void integer9() {
+        System.out.println("Integer9. Дано трехзначное число. " +
+                "Используя одну операцию деления нацело, вывести первую цифру данного числа (сотни).");
+        System.out.println("Введите трехзначное число: ");
+        int value = myScan.nextInt();
+        System.out.println("Ответ: " + value / 100);
+    }
 }
