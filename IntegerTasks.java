@@ -182,4 +182,11 @@ public class IntegerTasks {
         System.out.println("Введите кол-во секунд: ");
         System.out.println("Ответ: " + myScan.nextInt() % 3600);
     }
+
+    public void integer23() {
+        System.out.println("Integer23. С начала суток прошло N секунд (N — целое). " +
+                "Найти количество полных минут, прошедших с начала последнего часа.");
+        System.out.println("Введите кол-во секунд: ");
+        System.out.println("Ответ: " + myScan.nextInt() % 3600 / 60);
+    }
 }
