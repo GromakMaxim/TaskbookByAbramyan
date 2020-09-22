@@ -98,4 +98,12 @@ public class IntegerTasks {
         System.out.println("Сумма: " + (value / 100 + value % 100 / 10 + value % 100 % 10));
         System.out.println("Произведение: " + ((value / 100) * (value % 100 / 10) * (value % 100 % 10)));
     }
+
+    public void integer12() {
+        System.out.println("Integer12. Дано трехзначное число. " +
+                "Вывести число, полученное при прочтении исходного числа справа налево.");
+        System.out.println("Введите трехзначное число: ");
+        int value = myScan.nextInt();
+        System.out.println("Ответ: " + value % 100 % 10 + value % 100 / 10 + value / 100);
+    }
 }
