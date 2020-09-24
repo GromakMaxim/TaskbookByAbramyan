@@ -19,4 +19,12 @@ public class BooleanTasks {
             System.out.println("Число A является нечетным");
         }
     }
+
+    public void boolean3() {
+        System.out.println("Boolean3. Дано целое число A. Проверить истинность высказывания: «Число A является четным».");
+        double A = myScan.nextInt();
+        if (A % 2 == 0) {
+            System.out.println("Число A является четным");
+        }
+    }
 }

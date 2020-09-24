@@ -319,6 +319,9 @@ public class Main {
                 case 2:
                     booleanTasks.boolean2();
                     break;
+                case 3:
+                    booleanTasks.boolean3();
+                    break;
             }
         }
     }
