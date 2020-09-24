@@ -316,6 +316,9 @@ public class Main {
                 case 1:
                     booleanTasks.boolean1();
                     break;
+                case 2:
+                    booleanTasks.boolean2();
+                    break;
             }
         }
     }

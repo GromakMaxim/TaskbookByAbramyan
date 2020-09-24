@@ -11,4 +11,12 @@ public class BooleanTasks {
             System.out.println("Число A является положительным");
         }
     }
+
+    public void boolean2() {
+        System.out.println("Boolean2. Дано целое число A. Проверить истинность высказывания: «Число A является нечетным».");
+        double A = myScan.nextInt();
+        if (A % 2 != 0) {
+            System.out.println("Число A является нечетным");
+        }
+    }
 }
