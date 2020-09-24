@@ -294,6 +294,9 @@ public class Main {
                 case 28:
                     integerTasks.integer28();
                     break;
+                case 29:
+                    integerTasks.integer29();
+                    break;
                 default:
                     System.out.println("Введите номер задачи 1-30");
             }

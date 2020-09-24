@@ -237,5 +237,21 @@ public class IntegerTasks {
         int weekStartFrom = myScan.nextInt();
         System.out.println("Ответ: " + (dayNumber + weekStartFrom - 1) % 7);
     }
-
+    public void integer29(){
+        System.out.println("Integer29. Даны целые положительные числа A, B, C. \n" +
+        "На прямоугольнике размера A × B размещено максимально возможное количество квадратов со стороной C (без наложений). \n" +
+        "Найти количество квадратов, размещенных на прямоугольнике, а также площадь незанятой части прямоугольника.");
+        System.out.println("Введите А");
+        int A = myScan.nextInt();
+        System.out.println("Введите B");
+        int B = myScan.nextInt();
+        System.out.println("Введите C");
+        int C = myScan.nextInt();
+        int totalArea = A * B;//площадь большого прямоугольника
+        int squareArea = C * C;//площадь квадратика
+        int squaresNumber =  totalArea / squareArea; //количество квадратиков
+        int occupiedArea = squareArea * squaresNumber; //площадь занятой части
+        System.out.println("количество квадратов: " + squaresNumber);
+        System.out.println("площадь незанятой части: " + (totalArea - occupiedArea));
+    }
 }
