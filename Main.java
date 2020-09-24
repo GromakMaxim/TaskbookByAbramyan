@@ -33,6 +33,7 @@ public class Main {
                     integerTask();
                     break;
                 case 3:
+                    booleanTask();
                     break;
                 case 4:
                     break;
@@ -302,6 +303,19 @@ public class Main {
                     break;
                 default:
                     System.out.println("Введите номер задачи 1-30");
+            }
+        }
+    }
+
+    static void booleanTask() {
+        while (true) {
+            BooleanTasks booleanTasks = new BooleanTasks();
+            System.out.println("Введите номер задачи из блока BOOLEAN (1-40)");
+            int booleanMenuPoint = myScan.nextInt();
+            switch (booleanMenuPoint) {
+                case 1:
+                    booleanTasks.boolean1();
+                    break;
             }
         }
     }
