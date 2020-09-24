@@ -322,6 +322,27 @@ public class Main {
                 case 3:
                     booleanTasks.boolean3();
                     break;
+                case 4:
+                    booleanTasks.boolean4();
+                    break;
+                case 5:
+                    booleanTasks.boolean5();
+                    break;
+                case 6:
+                    booleanTasks.boolean6();
+                    break;
+                case 7:
+                    booleanTasks.boolean7();
+                    break;
+                case 8:
+                    booleanTasks.boolean8();
+                    break;
+                case 9:
+                    booleanTasks.boolean9();
+                    break;
+                case 10:
+                    booleanTasks.boolean10();
+                    break;
             }
         }
     }
