@@ -373,6 +373,68 @@ public class Main {
                 case 20:
                     booleanTasks.boolean20();
                     break;
+                case 21:
+                    booleanTasks.boolean21();
+                    break;
+                case 22:
+                    booleanTasks.boolean22();
+                    break;
+                case 23:
+                    booleanTasks.boolean23();
+                    break;
+                case 24:
+                    booleanTasks.boolean24();
+                    break;
+                case 25:
+                    booleanTasks.boolean25();
+                    break;
+                case 26:
+                    booleanTasks.boolean26();
+                    break;
+                case 27:
+                    booleanTasks.boolean27();
+                    break;
+                case 28:
+                    booleanTasks.boolean28();
+                    break;
+                case 29:
+                    booleanTasks.boolean29();
+                    break;
+                case 30:
+                    booleanTasks.boolean30();
+                    break;
+                case 31:
+                    booleanTasks.boolean31();
+                    break;
+                case 32:
+                    booleanTasks.boolean32();
+                    break;
+                case 33:
+                    booleanTasks.boolean33();
+                    break;
+                case 34:
+                    booleanTasks.boolean34();
+                    break;
+                case 35:
+                    booleanTasks.boolean35();
+                    break;
+                case 36:
+                    booleanTasks.boolean36();
+                    break;
+                case 37:
+                    booleanTasks.boolean37();
+                    break;
+                case 38:
+                    booleanTasks.boolean38();
+                    break;
+                case 39:
+                    booleanTasks.boolean39();
+                    break;
+                case 40:
+                    booleanTasks.boolean40();
+                    break;
+                default:
+                    System.out.println("Введите номер задачи 1-40");
             }
         }
     }
