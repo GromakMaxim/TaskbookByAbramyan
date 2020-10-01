@@ -135,7 +135,7 @@ public class CaseTasks {
             switch (month) {
                 case 2 -> System.out.println("День: " + 28 + " " + "Месяц: " + (month - 1));
                 case 4, 6, 9, 11 -> System.out.println("День: " + 30 + " " + "Месяц: " + (month - 1));
-                case 1, 3, 5, 7, 8, 10, 12 -> System.out.println("День: " + 31 + " " + "Месяц: " + (month - 1));
+                case 3, 5, 7, 8, 10, 12 -> System.out.println("День: " + 31 + " " + "Месяц: " + (month - 1));
                 default -> System.out.println("Введите число в диапазоне 1-12");
             }
         } else if (day == 1) {
@@ -278,6 +278,39 @@ public class CaseTasks {
                 "4 — площадь круга S = π·R^2. \n" +
                 "Дан номер одного из этих элементов и его значение. " +
                 "Вывести значения остальных элементов данной окружности (в том же порядке).");
+
+        System.out.println("Введите номер элемента");
+        int elementNumber = myScan.nextInt();
+        System.out.println("Введите значение");
+        double value = myScan.nextDouble();
+
+        switch (elementNumber) {
+            case 1 -> {
+                System.out.println("1 Радиус " + value);
+                System.out.println("2 Диаметр " + (value * 2));
+                System.out.println("3 Длина " + (2 * Math.PI * value));
+                System.out.println("4 Площадь круга " + Math.PI * Math.pow(value, 2));
+            }
+            case 2 -> {
+                System.out.println("2 Диаметр " + (value * 2));
+                System.out.println("1 Радиус " + value);
+                System.out.println("3 Длина " + (2 * Math.PI * value));
+                System.out.println("4 Площадь круга " + Math.PI * Math.pow(value, 2));
+            }
+            case 3 -> {
+                System.out.println("3 Длина " + (2 * Math.PI * value));
+                System.out.println("1 Радиус " + value);
+                System.out.println("2 Диаметр " + (value * 2));
+                System.out.println("4 Площадь круга " + Math.PI * Math.pow(value, 2));
+            }
+            case 4 -> {
+                System.out.println("4 Площадь круга " + Math.PI * Math.pow(value, 2));
+                System.out.println("1 Радиус " + value);
+                System.out.println("2 Диаметр " + (value * 2));
+                System.out.println("3 Длина " + (2 * Math.PI * value));
+            }
+            default -> System.out.println("Введите значение 1-4");
+        }
     }
 
     public void case13() {
