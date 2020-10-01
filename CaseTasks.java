@@ -182,8 +182,6 @@ public class CaseTasks {
                 "(«С» — север,«З» — запад, «Ю» — юг, «В» — восток) \n" +
                 "и принимать три цифровые команды: 0 — продолжать движение, 1 — поворот налево, −1 — поворот направо. \n" +
                 "Дан символ C — исходное направление робота и целое число N — посланная ему команда. " +
-                "Вывести направление робота после выполнения полученной команды. \n" +
-                "Дан символ C — исходное направление робота и целое число N — посланная ему команда. " +
                 "Вывести направление робота после выполнения полученной команды.");
         System.out.println("Введите направление («С» — север,«З» — запад, «Ю» — юг, «В» — восток)");
         String wayToMove = myScan.nextLine();
@@ -198,6 +196,7 @@ public class CaseTasks {
                     case "Ю" -> System.out.println("В");
                     case "В" -> System.out.println("С");
                 }
+                break;
             case -1:
                 switch (wayToMove) {
                     case "С" -> System.out.println("В");
@@ -205,8 +204,10 @@ public class CaseTasks {
                     case "Ю" -> System.out.println("З");
                     case "В" -> System.out.println("Ю");
                 }
+                break;
             case 0:
                 System.out.println(wayToMove);
+                break;
         }
     }
 
@@ -222,6 +223,51 @@ public class CaseTasks {
         int step1 = myScan.nextInt();
         System.out.println("Введите команду2 (0 — продолжать движение, 1 — поворот налево, −1 — поворот направо)");
         int step2 = myScan.nextInt();
+
+        switch (step1) {
+            case 1:
+                switch (wayToMove) {
+                    case "С" -> wayToMove = "З";
+                    case "З" -> wayToMove = "Ю";
+                    case "Ю" -> wayToMove = "В";
+                    case "В" -> wayToMove = "С";
+                }
+                break;
+            case -1:
+                switch (wayToMove) {
+                    case "С" -> wayToMove = "В";
+                    case "З" -> wayToMove = "С";
+                    case "Ю" -> wayToMove = "З";
+                    case "В" -> wayToMove = "Ю";
+                }
+                break;
+            case 0:
+                System.out.println(wayToMove);
+                break;
+        }
+        switch (step2) {
+            case 1:
+                switch (wayToMove) {
+                    case "С" -> wayToMove = "З";
+                    case "З" -> wayToMove = "Ю";
+                    case "Ю" -> wayToMove = "В";
+                    case "В" -> wayToMove = "С";
+                }
+                break;
+            case -1:
+                switch (wayToMove) {
+                    case "С" -> wayToMove = "В";
+                    case "З" -> wayToMove = "С";
+                    case "Ю" -> wayToMove = "З";
+                    case "В" -> wayToMove = "Ю";
+                }
+                break;
+            case 0:
+                System.out.println(wayToMove);
+                break;
+        }
+        System.out.println(wayToMove);
+
     }
 
     public void case12() {

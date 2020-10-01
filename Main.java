@@ -274,6 +274,7 @@ public class Main {
                 case 8 -> caseTasks.case8();
                 case 9 -> caseTasks.case9();
                 case 10 -> caseTasks.case10();
+                case 11 -> caseTasks.case11();
                 default -> System.out.println("Введите номер задачи 1-20");
             }
         }
