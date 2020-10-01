@@ -1,5 +1,3 @@
-import jdk.swing.interop.SwingInterOpUtils;
-
 import java.util.Scanner;
 
 public class IfTasks {
@@ -124,7 +122,7 @@ public class IfTasks {
         int A = myScan.nextInt();
         System.out.println("Введите В");
         int B = myScan.nextInt();
-        int temp = 0;
+        int temp;
         if (A > B) {
             temp = B;
             B = A;
@@ -470,7 +468,7 @@ public class IfTasks {
         int X = myScan.nextInt();
         if (X > 0) {
             System.out.println(2 * Math.sin(X));
-        } else if (X <= 0) {
+        } else {
             System.out.println(6 - X);
         }
     }

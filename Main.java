@@ -39,6 +39,7 @@ public class Main {
                     ifTask();
                     break;
                 case 5:
+                    caseTask();
                     break;
                 case 6:
                     break;
@@ -253,6 +254,27 @@ public class Main {
                 case 29 -> ifTasks.if29();
                 case 30 -> ifTasks.if30();
                 default -> System.out.println("Введите номер задачи 1-30");
+            }
+        }
+    }
+
+    static void caseTask() {
+        while (true) {
+            CaseTasks caseTasks = new CaseTasks();
+            System.out.println("Введите номер задачи из блока CASE (1-20)");
+            int caseMenuPoint = myScan.nextInt();
+            switch (caseMenuPoint) {
+                case 1 -> caseTasks.case1();
+                case 2 -> caseTasks.case2();
+                case 3 -> caseTasks.case3();
+                case 4 -> caseTasks.case4();
+                case 5 -> caseTasks.case5();
+                case 6 -> caseTasks.case6();
+                case 7 -> caseTasks.case7();
+                case 8 -> caseTasks.case8();
+                case 9 -> caseTasks.case9();
+                case 10 -> caseTasks.case10();
+                default -> System.out.println("Введите номер задачи 1-20");
             }
         }
     }
