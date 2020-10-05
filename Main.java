@@ -275,6 +275,15 @@ public class Main {
                 case 9 -> caseTasks.case9();
                 case 10 -> caseTasks.case10();
                 case 11 -> caseTasks.case11();
+                case 12 -> caseTasks.case12();
+                case 13 -> caseTasks.case13();
+                case 14 -> caseTasks.case14();
+                case 15 -> caseTasks.case15();
+                case 16 -> caseTasks.case16();
+                case 17 -> caseTasks.case17();
+                case 18 -> caseTasks.case18();
+                case 19 -> caseTasks.case19();
+                case 20 -> caseTasks.case20();
                 default -> System.out.println("Введите номер задачи 1-20");
             }
         }
