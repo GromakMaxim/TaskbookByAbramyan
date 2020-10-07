@@ -42,6 +42,7 @@ public class Main {
                     caseTask();
                     break;
                 case 6:
+                    forTask();
                     break;
                 case 7:
                     break;
@@ -285,6 +286,57 @@ public class Main {
                 case 19 -> caseTasks.case19();
                 case 20 -> caseTasks.case20();
                 default -> System.out.println("Введите номер задачи 1-20");
+            }
+        }
+    }
+
+    static void forTask() {
+        while (true) {
+            ForTasks forTasks = new ForTasks();
+            System.out.println("Введите номер задачи из блока FOR (1-40)");
+            int forMenuPoint = myScan.nextInt();
+            switch (forMenuPoint) {
+                case 1->forTasks.for1();
+                case 2->forTasks.for2();
+                case 3->forTasks.for3();
+                case 4->forTasks.for4();
+                case 5->forTasks.for5();
+                case 6->forTasks.for6();
+                case 7->forTasks.for7();
+                case 8->forTasks.for8();
+                case 9->forTasks.for9();
+                case 10->forTasks.for10();
+                case 11->forTasks.for11();
+                case 12->forTasks.for12();
+                case 13->forTasks.for13();
+                case 14->forTasks.for14();
+                case 15->forTasks.for15();
+                case 16->forTasks.for16();
+                case 17->forTasks.for17();
+                case 18->forTasks.for18();
+                case 19->forTasks.for19();
+                case 20->forTasks.for20();
+                case 21->forTasks.for21();
+                case 22->forTasks.for22();
+                case 23->forTasks.for23();
+                case 24->forTasks.for24();
+                case 25->forTasks.for25();
+                case 26->forTasks.for26();
+                case 27->forTasks.for27();
+                case 28->forTasks.for28();
+                case 29->forTasks.for29();
+                case 30->forTasks.for30();
+                case 31->forTasks.for31();
+                case 32->forTasks.for32();
+                case 33->forTasks.for33();
+                case 34->forTasks.for34();
+                case 35->forTasks.for35();
+                case 36->forTasks.for36();
+                case 37->forTasks.for37();
+                case 38->forTasks.for38();
+                case 39->forTasks.for39();
+                case 40->forTasks.for40();
+                default -> System.out.println("Введите номер задачи 1-40");
             }
         }
     }
