@@ -1,5 +1,3 @@
-import jdk.swing.interop.SwingInterOpUtils;
-
 import java.util.Scanner;
 
 public class ForTasks {
@@ -157,29 +155,88 @@ public class ForTasks {
     }
 
     public void for11() {
-        System.out.println("For11. Дано целое число N>0.Найти сумму N2 + (N + 1)2 + (N + 2)2 + ... + (2·N)2(целое число).");
+        System.out.println("For11. Дано целое число N>0.Найти сумму N^2 + (N + 1)^2 + (N + 2)^2 + ... + (2·N)^2(целое число).");
+        System.out.println("Введите число N");
+        int N = myScan.nextInt();
+        if (N < 1) {
+            System.out.println("Ошибка! По условию N>0");
+        } else {
+            double sum = 0;
+            for (int i = N; i < (2 * N); i++) {
+                sum = sum + Math.pow(N, 2);
+            }
+            System.out.println(sum);
+        }
     }
 
     public void for12() {
-        System.out.println("For12. Дано целое число N (> 0). Найти произведение 1.1 · 1.2 · 1.3 · ... (N сомножителей).");
+        System.out.println("For12. Дано целое число N>0. Найти произведение 1.1 · 1.2 · 1.3 · ... (N сомножителей).");
+        System.out.println("Введите число N");
+        int N = myScan.nextInt();
+        if (N < 1) {
+            System.out.println("Ошибка! По условию N>0");
+        } else {
+            double sum = 0;
+            for (double i = 1; i < N + 1; i++) {
+                sum = sum + 1 + (i / 10);
+            }
+            System.out.println(sum);
+        }
     }
 
     public void for13() {
-        System.out.println("For13. Дано целое число N (> 0). \n" +
+        System.out.println("For13. Дано целое число N>0. \n" +
                 "Найти значение выражения 1.1 − 1.2 + 1.3 − ... (N слагаемых, знаки чередуются). " +
                 "Условный оператор не использовать.");
+        System.out.println("Введите число N");
+        int N = myScan.nextInt();
+        if (N < 1) {
+            System.out.println("Ошибка! По условию N>0");
+        } else {
+            int temp = -1;
+            double sum = 0;
+            for (double i = 1; i < N + 1; i++) {
+                temp = -temp;
+                sum = sum + (temp * (1 + (i / 10)));
+            }
+            System.out.println(sum);
+        }
     }
 
     public void for14() {
-        System.out.println("For14. Дано целое число N (> 0). " +
-                "Найти квадрат данного числа, используя для его вычисления следующую формулу: \n" +
-                "N2 = 1 + 3 + 5 + . . . + (2·N − 1). После добавления к сумме каждого слагаемого выводить " +
-                "текущее значение суммы (в результате будут выведены квадраты всех целых чисел от 1 до N).");
+        System.out.println("For14. Дано целое число N>0. Найти квадрат данного числа, используя для его " +
+                "вычисления следующую формулу: \n N2 = 1 + 3 + 5 + . . . + (2·N − 1). После добавления к сумме " +
+                "каждого слагаемого выводить текущее значение суммы (в результате будут выведены квадраты всех " +
+                "целых чисел от 1 до N).");
+        System.out.println("Введите число N");
+        int N = myScan.nextInt();
+        if (N < 1) {
+            System.out.println("Ошибка! По условию N>0");
+        } else {
+            int A = 0;
+            for (int i = 1; i < N + 1; i++) {
+                A = A + 2 * i - 1;
+                System.out.println(i + " " + A);
+            }
+        }
     }
 
     public void for15() {
-        System.out.println("For15. Дано вещественное число A и целое число N (> 0). \n" +
-                "Найти A в степени N:A N = A·A· . . . ·A (числа A перемножаются N раз).");
+        System.out.println("For15. Дано вещественное число A и целое число N>0. Найти A в степени N:\n" +
+                "A^N = A·A· . . . ·A (числа A перемножаются N раз).");
+        System.out.println("Введите число A");
+        int A = myScan.nextInt();
+        System.out.println("Введите число N");
+        int N = myScan.nextInt();
+        if (A < 1 || N < 1) {
+            System.out.println("Ошибка");
+        } else{
+            int result = 1;
+            for (int i = 1; i < N + 1; i++) {
+                result = result * A;
+            }
+            System.out.println(result);
+        }
     }
 
     public void for16() {
