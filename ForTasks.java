@@ -1,3 +1,5 @@
+import jdk.swing.interop.SwingInterOpUtils;
+
 import java.util.Scanner;
 
 public class ForTasks {
@@ -242,7 +244,9 @@ public class ForTasks {
     public void for16() {
         System.out.println("For16. Дано вещественное число A и целое число N>0. \n" +
                 "Используя один цикл, вывести все целые степени числа A от 1 до N.");
+        System.out.println("Введите число A");
         int A = myScan.nextInt();
+        System.out.println("Введите число N");
         int N = myScan.nextInt();
         if (A < 1 || N < 1) {
             System.out.println("Ошибка!");
@@ -259,7 +263,9 @@ public class ForTasks {
     public void for17() {
         System.out.println("For17. Дано вещественное число A и целое число N>0. \n" +
                 "Используя один цикл, найти сумму 1 + A + A^2 + A^3 + . . . + A^N .");
+        System.out.println("Введите число A");
         int A = myScan.nextInt();
+        System.out.println("Введите число N");
         int N = myScan.nextInt();
         if (A < 1 || N < 1) {
             System.out.println("Ошибка!");
@@ -275,7 +281,9 @@ public class ForTasks {
     public void for18() {
         System.out.println("For18. Дано вещественное число A и целое число N>0. Используя один цикл, найти значение выражения\n" +
                 "1 − A + A^2 − A^3 + ... + (−1)^N·A^N. Условный оператор не использовать.");
+        System.out.println("Введите число A");
         int A = myScan.nextInt();
+        System.out.println("Введите число N");
         int N = myScan.nextInt();
         if (A < 1 || N < 1) {
             System.out.println("Ошибка!");
@@ -294,6 +302,7 @@ public class ForTasks {
         System.out.println("For19. Дано целое число N>0. Найти произведение N! = 1·2·...·N (N–факториал). \n" +
                 "Чтобы избежать целочисленного переполнения, вычислять это произведение с помощью " +
                 "вещественной переменной и вывести его как вещественное число.");
+        System.out.println("Введите число N");
         int N = myScan.nextInt();
         if (N < 1) {
             System.out.println("Ошибка!");
@@ -311,6 +320,7 @@ public class ForTasks {
                 "(выражение N! — N–факториал — обозначает произведение всех целых чисел от 1 до N: N! = 1·2·...·N). \n" +
                 "Чтобы избежать целочисленного переполнения, проводить вычисления с помощью вещественных переменных " +
                 "и вывести результат как вещественное число.");
+        System.out.println("Введите число N");
         int N = myScan.nextInt();
         if (N < 1) {
             System.out.println("Ошибка");
@@ -330,6 +340,7 @@ public class ForTasks {
                 "1 + 1/(1!) + 1/(2!) + 1/(3!) + ... + 1/(N!) (выражение N! — N–факториал — " +
                 "обозначает произведение всех целых чисел от 1 до N: N! = 1·2·. . .·N). \n" +
                 "Полученное число является приближенным значением константы e = exp(1).");
+        System.out.println("Введите число N");
         int N = myScan.nextInt();
         if (N < 1) {
             System.out.println("Ошибка!");
@@ -348,7 +359,9 @@ public class ForTasks {
         System.out.println("For22. Дано вещественное число X и целое число N>0. \n" +
                 "Найти значение выражения 1 + X + X2/(2!) + . . . + XN /(N!)(N! = 1·2·. . .·N). \n" +
                 "Полученное число является приближенным значением функции exp в точке X.");
+        System.out.println("Введите число X");
         int X = myScan.nextInt();
+        System.out.println("Введите число N");
         int N = myScan.nextInt();
         if (X < 1 || N < 1) {
             System.out.println("Ошибка!");
@@ -368,7 +381,9 @@ public class ForTasks {
         System.out.println("For23. Дано вещественное число X и целое число N > 0). \n" +
                 "Найти значение выражения X − X3/(3!) + X5/(5!) − ... + (−1)N ·X2·N+1/((2·N+1)!)(N! = 1·2·. . .·N). \n" +
                 "Полученное число является приближенным значением функции sin в точке X.");
+        System.out.println("Введите число X");
         int X = myScan.nextInt();
+        System.out.println("Введите число N");
         int N = myScan.nextInt();
         if (X < 1 || N < 1) {
             System.out.println("Ошибка");
@@ -389,7 +404,9 @@ public class ForTasks {
         System.out.println("For24. Дано вещественное число X и целое число N (> 0). " +
                 "Найти значение выражения 1 − X2/(2!) + X4/(4!) − ... + (−1)N ·X2·N /((2·N)!)(N! = 1·2·. . .·N). \n" +
                 "Полученное число является приближенным значением функции cos в точке X.");
+        System.out.println("Введите число X");
         int X = myScan.nextInt();
+        System.out.println("Введите число N");
         int N = myScan.nextInt();
         if (X < 1 || N < 1) {
             System.out.println("Ошибка");
@@ -410,7 +427,9 @@ public class ForTasks {
         System.out.println("For25. Дано вещественное число X (|X| < 1) и целое число N>0. " +
                 "Найти значение выражения X − X2/2 + X3/3 − . . . + (−1)N−1·XN /N. \n" +
                 "Полученное число является приближенным значением функции ln в точке 1 + X.");
+        System.out.println("Введите число X");
         int X = myScan.nextInt();
+        System.out.println("Введите число N");
         int N = myScan.nextInt();
         int sum = 0;
         if (X > 1 || N < 1) {
@@ -426,27 +445,92 @@ public class ForTasks {
     }
 
     public void for26() {
-        System.out.println("For26. Дано вещественное число X (|X| < 1) и целое число N (> 0). " +
-                "Найти значение выражения X − X3/3 + X5/5 − . . . + (−1)N ·X2·N+1/(2·N+1). \n" +
+        System.out.println("For26. Дано вещественное число X (|X| < 1) и целое число N>0). " +
+                "Найти значение выражения X − X^3/3 + X^5/5 − . . . + (−1)^N-1 · X^(2·N-1)/(2·N+1). \n" +
                 "Полученное число является приближенным значением функции arctg в точке X.");
+        System.out.println("Введите число X");
+        int X = myScan.nextInt();
+        System.out.println("Введите число N");
+        int N = myScan.nextInt();
+        double sum = X;
+        double X2 = Math.pow(X, 2);
+        if (X == 0) {
+            System.out.println("Ошибка");
+        } else {
+            double a = X;
+            for (int i = 2; i < N + 1; i++) {
+                a = -a * X2;
+                sum = sum + a / (2 * i - 1);
+            }
+            System.out.println(sum);
+        }
     }
 
     public void for27() {
         System.out.println("For27. Дано вещественное число X (|X| < 1) и целое число N (> 0). " +
-                "Найти значение выражения X + 1·X3/(2·3) + 1·3·X5/(2·4·5) + ... + 1·3·...·(2·N−1)·X2·N+1/(2·4·...·(2·N)·(2·N+1)).\n" +
+                "Найти значение выражения X + 1·X^3/(2·3) + 1·3·X^5/(2·4·5) + ... + 1·3·...·(2·N−1)·X^(2·N-1)/(2·4·...·(2·N-2)·(2·N-1)).\n" +
                 "Полученное число является приближенным значением функции arcsin в точке X.");
+        System.out.println("Введите число X");
+        int X = myScan.nextInt();
+        System.out.println("Введите число N");
+        int N = myScan.nextInt();
+        double sum = X;
+        double X2 = Math.pow(X, 2);
+        if (X == 0) {
+            System.out.println("Ошибка");
+        } else {
+            double a = X;
+            for (int i = 2; i < N + 1; i++) {
+                a = a * X2 * (2 * i - 3) / (2 * i - 2);
+                sum = sum + a / (2 * i - 1);
+            }
+            System.out.println(sum);
+        }
     }
 
     public void for28() {
-        System.out.println("For28. Дано вещественное число X (|X| < 1) и целое число N (> 0). " +
-                "Найти значение выражения 1 + X/2 − 1·X2/(2·4) + 1·3·X3/(2·4·6) − ... + (−1)N−1·1·3·...·(2·N−3)·X N /(2·4·...·(2·N)). \n" +
-                "Полученное число является приближенным значением функции √1+X.");
+        System.out.println("For28. Дано вещественное число X (|X| < 1) и целое число N (> 0). \n" +
+                "Найти значение выражения 1 + X/2 − 1·X^2/(2·4) + 1·3·X^3/(2·4·6) − ... + (−1)^(N−1)·1·3·..." +
+                "·(2·N−3)·X^N /(2·4·...·(2·N)). \n Полученное число является приближенным значением функции √1+X.");
+        System.out.println("Введите число X");
+        int X = myScan.nextInt();
+        System.out.println("Введите число N");
+        int N = myScan.nextInt();
+        int a = 1;//первое слагаемое
+        int sum = 1;
+        if (X == 0) {
+            System.out.println("Ошибка");
+        } else {
+            for (int i = 1; i < N + 1; i++) {
+                a = -a * X * (2 * i - 3) / (2 * i);
+                sum = sum + a;
+            }
+            System.out.println(sum);
+        }
     }
 
     public void for29() {
-        System.out.println("For29. Дано целое число N (> 1) и две вещественные точки на числовой оси: A, B (A < B)." +
+        System.out.println("For29. Дано целое число N > 1 и две вещественные точки на числовой оси: A, B (A < B)." +
                 "Отрезок [A, B] разбит на N равных отрезков. \nВывести H — длину каждого отрезка, " +
                 "а также набор точек A, A + H, A + 2·H, A + 3·H, . . . , B, образующий разбиение отрезка [A, B].");
+        System.out.println("Введите N");
+        int N = myScan.nextInt();
+        System.out.println("Введите A");
+        int A = myScan.nextInt();
+        System.out.println("Введите B");
+        int B = myScan.nextInt();
+        if (A < 1 || B < 1 || N <= 1) {
+            System.out.println("Ошибка");
+        } else {
+            int H = Math.abs(A - B) / N;
+            for (int i = 1; i < N + 1; i++) {
+                if (i == 1) {
+                    System.out.println((A + i * H) + " " + "AH");
+                } else {
+                    System.out.println((A + i * H) + " " + "A" + i + "H");
+                }
+            }
+        }
     }
 
     public void for30() {
