@@ -1,3 +1,5 @@
+import jdk.swing.interop.SwingInterOpUtils;
+
 import java.util.Scanner;
 
 public class ForTasks {
@@ -230,7 +232,7 @@ public class ForTasks {
         int N = myScan.nextInt();
         if (A < 1 || N < 1) {
             System.out.println("Ошибка");
-        } else{
+        } else {
             int result = 1;
             for (int i = 1; i < N + 1; i++) {
                 result = result * A;
@@ -240,34 +242,89 @@ public class ForTasks {
     }
 
     public void for16() {
-        System.out.println("For16. Дано вещественное число A и целое число N (> 0). \n" +
+        System.out.println("For16. Дано вещественное число A и целое число N>0. \n" +
                 "Используя один цикл, вывести все целые степени числа A от 1 до N.");
+        int A = myScan.nextInt();
+        int N = myScan.nextInt();
+        if (A < 1 && N < 1) {
+            System.out.println("Ошибка!");
+        } else {
+            int result = 1;
+            for (int i = 1; i < N + 1; i++) {
+                result = result * A;
+                System.out.println(result);
+                //или System.out.println(Math.pow(A,i));
+            }
+        }
     }
 
     public void for17() {
-        System.out.println("For17. Дано вещественное число A и целое число N (> 0). \n" +
-                "Используя один цикл, найти сумму 1 + A + A 2 + A 3 + . . . + A N .");
+        System.out.println("For17. Дано вещественное число A и целое число N>0. \n" +
+                "Используя один цикл, найти сумму 1 + A + A^2 + A^3 + . . . + A^N .");
+        int A = myScan.nextInt();
+        int N = myScan.nextInt();
+        if (A < 1 && N < 1) {
+            System.out.println("Ошибка!");
+        } else {
+            double sum = 1;
+            for (int i = 1; i < N + 1; i++) {
+                sum = sum + Math.pow(A, i);
+                System.out.println(sum);
+            }
+        }
     }
 
     public void for18() {
-        System.out.println("For18. Дано вещественное число A и целое число N (> 0). Используя один цикл, найти значение выражения\n" +
-                "1 − A + A\n" +
-                "2 − A\n" +
-                "3 + . . . + (−1)N ·A N .\n" +
-                "Условный оператор не использовать.");
+        System.out.println("For18. Дано вещественное число A и целое число N>0. Используя один цикл, найти значение выражения\n" +
+                "1 − A + A^2 − A^3 + ... + (−1)^N·A^N. Условный оператор не использовать.");
+        int A = myScan.nextInt();
+        int N = myScan.nextInt();
+        if (A < 1 && N < 1) {
+            System.out.println("Ошибка!");
+        } else {
+            int temp = -1;
+            double sum = 1;
+            for (int i = 1; i < N + 1; i++) {
+                sum = sum + (temp * (Math.pow(A, i)));
+                temp = -temp;
+            }
+            System.out.println(sum);
+        }
     }
 
     public void for19() {
-        System.out.println("For19. Дано целое число N (> 0). Найти произведение N! = 1·2·. . .·N (N–факториал). \n" +
+        System.out.println("For19. Дано целое число N>0. Найти произведение N! = 1·2·...·N (N–факториал). \n" +
                 "Чтобы избежать целочисленного переполнения, вычислять это произведение с помощью " +
                 "вещественной переменной и вывести его как вещественное число.");
+        int N = myScan.nextInt();
+        if (N < 1) {
+            System.out.println("Ошибка!");
+        } else {
+            int sum = 1;
+            for (int i = 1; i < N + 1; i++) {
+                sum = sum * i;
+            }
+            System.out.println(sum);
+        }
     }
 
     public void for20() {
-        System.out.println("For20. Дано целое число N (> 0). Используя один цикл, найти сумму 1! + 2! + 3! + ... + N! " +
+        System.out.println("For20. Дано целое число N>0. Используя один цикл, найти сумму 1! + 2! + 3! + ... + N! " +
                 "(выражение N! — N–факториал — обозначает произведение всех целых чисел от 1 до N: N! = 1·2·...·N). \n" +
                 "Чтобы избежать целочисленного переполнения, проводить вычисления с помощью вещественных переменных " +
                 "и вывести результат как вещественное число.");
+        int N = myScan.nextInt();
+        if (N < 1) {
+            System.out.println("Ошибка");
+        } else {
+            int sum = 0;
+            int factorial = 1;
+            for (int i = 1; i < N + 1; i++) {
+                factorial = factorial * i;
+                sum = sum + factorial;
+            }
+            System.out.println(sum);
+        }
     }
 
     public void for21() {
@@ -275,6 +332,7 @@ public class ForTasks {
                 "1 + 1/(1!) + 1/(2!) + 1/(3!) + ... + 1/(N!) (выражение N! — N–факториал — " +
                 "обозначает произведение всех целых чисел от 1 до N: N! = 1·2·. . .·N). \n" +
                 "Полученное число является приближенным значением константы e = exp(1).");
+
     }
 
     public void for22() {
