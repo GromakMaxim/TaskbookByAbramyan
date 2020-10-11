@@ -534,38 +534,123 @@ public class ForTasks {
     }
 
     public void for30() {
-        System.out.println("For30. Дано целое число N (> 1) и две вещественные точки на числовой оси: A, B (A < B). \n" +
+        System.out.println("For30. Дано целое число N>1 и две вещественные точки на числовой оси: A, B (A < B). \n" +
                 "Отрезок [A, B] разбит на N равных отрезков. Вывести H — длину каждого отрезка, " +
                 "а также значения функции F(X) = 1 − sin(X) в точках, \n" +
                 "разбивающих отрезок [A, B]: F(A), F(A + H), F(A + 2·H), . . . , F(B).");
+        System.out.println("Введите N");
+        int N = myScan.nextInt();
+        System.out.println("Введите A");
+        int A = myScan.nextInt();
+        System.out.println("Введите B");
+        int B = myScan.nextInt();
+        if (A > B || N <= 1) {
+            System.out.println("Ошибка");
+        } else {
+            int H = Math.abs(B - A) / N;//длина отрезка
+            System.out.println("Длина отрезка: " + H);
+            System.out.println(Math.sin(A));
+            for (int i = 1; i < N + 1; i++) {
+                System.out.println(Math.sin(A + i * H));
+            }
+        }
     }
 
     public void for31() {
-        System.out.println("For31. Дано целое число N (> 0). Последовательность вещественных чисел AK определяется следующим образом: \n" +
+        System.out.println("For31. Дано целое число N>0. Последовательность вещественных чисел AK определяется следующим образом: \n" +
                 "A0 = 2, AK = 2 + 1/AK−1, K = 1, 2, . . . . Вывести элементы A1, A2, . . . , AN .");
+        System.out.println("Введите N");
+        int N = myScan.nextInt();
+        if (N < 1) {
+            System.out.println("Ошибка");
+        } else {
+            int A = 2; //начальное значение
+            for (int i = 1; i < N + 1; i++) {
+                A = 2 + 1 / A;
+                System.out.println(i + ": " + A);
+            }
+        }
     }
 
     public void for32() {
-        System.out.println("For32. Дано целое число N (> 0). Последовательность вещественных чисел AK определяется " +
+        System.out.println("For32. Дано целое число N>0. Последовательность вещественных чисел AK определяется " +
                 "следующим образом: \n A0 = 1, AK = (AK−1 + 1)/K, K = 1, 2, ... . Вывести элементы A1, A2, ... , AN .");
+        System.out.println("Введите N");
+        int N = myScan.nextInt();
+        if (N < 2) {
+            System.out.println("Ошибка");
+        } else {
+            int A = 1; //начальное значение
+            for (int i = 1; i < N + 1; i++) {
+                A = (A + 1 / i);
+                System.out.println(i + ": " + A);
+            }
+        }
     }
 
     public void for33() {
-        System.out.println("For33. Дано целое число N (> 1). Последовательность чисел Фибоначчи FK (целого типа) " +
+        System.out.println("For33. Дано целое число N>1. Последовательность чисел Фибоначчи FK (целого типа) " +
                 "определяется следующим образом: F1 = 1, F2 = 1, FK = FK−2 + FK−1, K = 3, 4, ... . \n" +
                 "Вывести элементы F1, F2, ..., FN .");
+        System.out.println("Введите N");
+        int N = myScan.nextInt();
+        if (N < 2) {
+            System.out.println("Ошибка");
+        } else {
+            int F1 = 1, F2 = 1;
+            System.out.println("F1: " + F1);//первое и второе значение в последовательности фиб.
+            System.out.println("F2: " + F2);
+            for (int i = 3; i < N + 1; i++) {
+                int Fi = F1 + F2;
+                System.out.println("F" + i + ": " + Fi);
+                F1 = F2;
+                F2 = Fi;
+            }
+        }
     }
 
     public void for34() {
         System.out.println("For34. Дано целое число N (> 1). Последовательность вещественных чисел AK " +
                 "определяется следующим образом: \nA1 = 1, A2 = 2, AK = (AK−2 + 2·AK−1)/3, K = 3, 4, . . . . " +
                 "Вывести элементы A1, A2, . . . , AN .");
+        System.out.println("Введите N");
+        int N = myScan.nextInt();
+        if (N < 2) {
+            System.out.println("Ошибка");
+        } else {
+            int A1 = 1, A2 = 1; // 1, 2 элемент последовательности
+            System.out.println("A1: " + A1);
+            System.out.println("A2: " + A2);
+            for (int i = 3; i < N + 1; i++) {
+                int Ai = (A1 + 2 * A2) / 3;
+                System.out.println("Ai");
+                A1 = A2;
+                A2 = Ai;
+            }
+        }
     }
 
     public void for35() {
-        System.out.println("For35. Дано целое число N (> 2). Последовательность целых чисел AK " +
+        System.out.println("For35. Дано целое число N>2. Последовательность целых чисел AK " +
                 "определяется следующим образом: A1 = 1, A2 = 2, A3 = 3, AK = AK−1 + AK−2 − 2·AK−3, K = 4, 5, ... . \n" +
                 "Вывести элементы A1, A2, . . . , AN .");
+        System.out.println("Введите N");
+        int N = myScan.nextInt();
+        if (N < 2) {
+            System.out.println("Ошибка");
+        } else {
+            int A1 = 1, A2 = 2, A3 = 3;// 1, 2, 3 элемент последовательности
+            System.out.println("A1: " + A1);
+            System.out.println("A2: " + A2);
+            System.out.println("A3: " + A3);
+            for (int i = 4; i < N + 1; i++) {
+                int Ai = A3 + A2 - 2 * A1;
+                System.out.println(Ai);
+                A1 = A2;
+                A2 = A3;
+                A3 = Ai;
+            }
+        }
     }
 
     public void for36() {
