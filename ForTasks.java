@@ -654,31 +654,104 @@ public class ForTasks {
     }
 
     public void for36() {
-        System.out.println("For36. Даны целые положительные числа N и K. Найти сумму 1K + 2K + . . . + N K.\n" +
+        System.out.println("For36. Даны целые положительные числа N и K. Найти сумму 1^K + 2^K + . . . + N^K.\n" +
                 "Чтобы избежать целочисленного переполнения, вычислять слагаемые этой суммы с помощью вещественной " +
                 "переменной и выводить результат как вещественное число.");
+        System.out.println("Введите N");
+        int N = myScan.nextInt();
+        System.out.println("Введите K");
+        int K = myScan.nextInt();
+        if (N < 1 || K < 1) {
+            System.out.println("Ошибка");
+        } else {
+            double sum = 0;
+            for (int i = 1; i < N + 1; i++) {
+                sum = sum + (Math.pow(i, K));
+                System.out.println(sum);
+            }
+        }
     }
 
     public void for37() {
-        System.out.println("For37. Дано целое число N (> 0). Найти сумму 11 + 22 + ... + N N .\n" +
+        System.out.println("For37. Дано целое число N>0. Найти сумму 1^1 + 2^2 + ... + N^N .\n" +
                 "Чтобы избежать целочисленного переполнения, вычислять слагаемые этой суммы с помощью " +
                 "вещественной переменной и выводить результат как вещественное число.");
+        System.out.println("Введите N");
+        int N = myScan.nextInt();
+        if (N < 1) {
+            System.out.println("Ошибка");
+        } else {
+            double sum = 0;
+            for (int i = 1; i < N + 1; i++) {
+                sum = sum + (Math.pow(i, i));
+                System.out.println(i + ": " + sum);
+            }
+        }
     }
 
     public void for38() {
-        System.out.println("For38. Дано целое число N (> 0). Найти сумму 1N + 2N−1 + . . . + N1.\n" +
+        System.out.println("For38. Дано целое число N>0. Найти сумму 1^N + 2^(N−1) + . . . + N1.\n" +
                 "Чтобы избежать целочисленного переполнения, вычислять слагаемые этой суммы с помощью " +
                 "вещественной переменной и выводить результат как вещественное число.");
+        System.out.println("Введите N");
+        int N = myScan.nextInt();
+        if (N < 1) {
+            System.out.println("Ошибка");
+        } else {
+            double sum = 0;
+
+            for (int i = 1; i < N + 1; i++) {
+                if (i == 1) {
+                    sum = Math.pow(1, N);
+                    System.out.println("N=" + i + ": " + sum);
+                } else {
+                    sum = sum + (Math.pow(2, N - 1));
+                    System.out.println("N=" + i + ": " + sum);
+                }
+            }
+        }
     }
 
     public void for39() {
         System.out.println("For39. Даны целые положительные числа A и B (A < B). Вывести все целые числа от A до B " +
                 "включительно; \n при этом каждое число должно выводиться столько раз, каково его значение " +
                 "(например, число 3 выводится 3 раза).");
+        System.out.println("Введите A");
+        int A = myScan.nextInt();
+        System.out.println("Введите B");
+        int B = myScan.nextInt();
+        if (A >= B) {
+            System.out.println("Ошибка");
+        } else {
+            for (int i = A; i < B + 1; i++) {
+                for(int j = 1; j<A+1;j++){
+                    System.out.print(A + " ");
+                }
+                A++;
+                System.out.println();
+            }
+        }
     }
 
     public void for40() {
         System.out.println("For40. Даны целые числа A и B (A < B). Вывести все целые числа от A до B включительно; \n" +
                 "при этом число A должно выводиться 1 раз, число A + 1 должно выводиться 2 раза и т. д.");
+        System.out.println("Введите A");
+        int A = myScan.nextInt();
+        System.out.println("Введите B");
+        int B = myScan.nextInt();
+        if (A >= B) {
+            System.out.println("Ошибка");
+        } else {
+            int iteration = 1;
+            for (int i = A; i < B + 1; i++) {
+                for(int j = 1; j<iteration+1;j++){
+                    System.out.print(A + " ");
+                }
+                A++;
+                iteration++;
+                System.out.println();
+            }
+        }
     }
 }
