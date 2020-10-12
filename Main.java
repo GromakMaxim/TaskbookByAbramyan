@@ -45,6 +45,7 @@ public class Main {
                     forTask();
                     break;
                 case 7:
+                    whileTask();
                     break;
                 case 8:
                     break;
@@ -340,4 +341,46 @@ public class Main {
             }
         }
     }
+    static void whileTask() {
+        while (true){
+            WhileTasks whileTasks = new WhileTasks();
+            System.out.println("Введите номер задачи из блока WHILE (1-30)");
+            int whileMenuPoint = myScan.nextInt();
+            switch (whileMenuPoint) {
+                case 1->whileTasks.while1();
+                case 2->whileTasks.while2();
+                case 3->whileTasks.while3();
+                case 4->whileTasks.while4();
+                case 5->whileTasks.while5();
+                case 6->whileTasks.while6();
+                case 7->whileTasks.while7();
+                case 8->whileTasks.while8();
+                case 9->whileTasks.while9();
+                case 10->whileTasks.while10();
+
+                case 11->whileTasks.while11();
+                case 12->whileTasks.while12();
+                case 13->whileTasks.while13();
+                case 14->whileTasks.while14();
+                case 15->whileTasks.while15();
+                case 16->whileTasks.while16();
+                case 17->whileTasks.while17();
+                case 18->whileTasks.while18();
+                case 19->whileTasks.while19();
+                case 20->whileTasks.while20();
+
+                case 21->whileTasks.while21();
+                case 22->whileTasks.while22();
+                case 23->whileTasks.while23();
+                case 24->whileTasks.while24();
+                case 25->whileTasks.while25();
+                case 26->whileTasks.while26();
+                case 27->whileTasks.while27();
+                case 28->whileTasks.while28();
+                case 29->whileTasks.while29();
+                case 30->whileTasks.while30();
+            }
+        }
+    }
+
 }
