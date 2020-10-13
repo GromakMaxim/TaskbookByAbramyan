@@ -91,13 +91,13 @@ public class WhileTasks {
         if (N <= 0) {
             System.out.println("Ошибка!");
         } else {
-            int i=0;
-            while (true){
-                if (N == Math.pow(2,i)){
+            int i = 0;
+            while (true) {
+                if (N == Math.pow(2, i)) {
                     System.out.println("Ответ: " + i);
                     break;
                 } else {
-                    if (N > Math.pow(2,i)){
+                    if (N > Math.pow(2, i)) {
                         i++;
                     } else {
                         System.out.println("Не является квадратом числа 2");
@@ -109,30 +109,87 @@ public class WhileTasks {
     }
 
     public void while6() {
-        System.out.println("While6. Дано целое число N (> 0). Найти двойной факториал N:N!! = N·(N−2)·(N−4)·. . ." +
+        System.out.println("While6. Дано целое число N (> 0). Найти двойной факториал N: \n" +
+                "N!! = N·(N−2)·(N−4)·. . ." +
                 "(последний сомножитель равен 2, если N — четное, и 1, если N — нечетное).\n" +
                 "Чтобы избежать целочисленного переполнения, вычислять это произведение с помощью " +
                 "вещественной переменной и вывести его как вещественное число.");
+        System.out.println("Введите N");
+        int N = myScan.nextInt();
+        if (N <= 0) {
+            System.out.println("Ошибка");
+        } else {
+            long sum = 1;
+            int i = N % 2 == 0 ? 2 : 1;
+            for (int j = i; j < N + 1; j = j + 2) {
+                sum = sum * j;
+            }
+            System.out.println(sum);
+        }
     }
 
     public void while7() {
         System.out.println("While7. Дано целое число N (> 0). Найти наименьшее целое положительное число K, " +
-                "квадрат которого превосходит N: K2 > N. Функцию извлечения квадратного корня не использовать.");
+                "квадрат которого превосходит N: K^2 > N. Функцию извлечения квадратного корня не использовать.");
+        System.out.println("Введите N");
+        int N = myScan.nextInt();
+        if (N <= 0) {
+            System.out.println("Ошибка");
+        } else {
+            int K = 1;
+            while (K * K <= N) {
+                K++;
+            }
+            System.out.println(K);
+        }
     }
 
     public void while8() {
         System.out.println("While8. Дано целое число N (> 0). Найти наибольшее целое число K, " +
-                "квадрат которого не превосходит N: K 2 ≤ N. Функцию извлечения квадратного корня не использовать.");
+                "квадрат которого не превосходит N: K^2 ≤ N. Функцию извлечения квадратного корня не использовать.");
+        System.out.println("Введите N");
+        int N = myScan.nextInt();
+        if (N <= 0) {
+            System.out.println("Ошибка");
+        } else {
+            int K = 1;
+            while (K * K <= N) {
+                K++;
+            }
+            System.out.println(K - 1);
+        }
     }
 
     public void while9() {
         System.out.println("While9. Дано целое число N (> 1). Найти наименьшее целое число K, при котором выполняется " +
                 "неравенство 3K > N.");
+        System.out.println("Введите N");
+        int N = myScan.nextInt();
+        if (N <= 1) {
+            System.out.println("Ошибка");
+        } else {
+            int K = 1;
+            while (3 * K <= N) {
+                K++;
+            }
+            System.out.println(K - 1);
+        }
     }
 
     public void while10() {
         System.out.println("While10. Дано целое число N (> 1). Найти наибольшее целое число K, при котором выполняется " +
                 "неравенство 3K < N.");
+        System.out.println("Введите N");
+        int N = myScan.nextInt();
+        if (N <= 1) {
+            System.out.println("Ошибка");
+        } else {
+            int K = 1;
+            while (3 * (K + 1) < N) {
+                K++;
+            }
+            System.out.println(K);
+        }
     }
 
     public void while11() {
